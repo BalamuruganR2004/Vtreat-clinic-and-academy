@@ -848,26 +848,39 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   // 11. DYNAMIC REAL CLIENT PHOTO INJECTION
   // ==========================================
-  fetch('real_photos.json')
-    .then(response => response.json())
-    .then(data => {
-      // Create hidden store
-      const storeDiv = document.createElement('div');
-      storeDiv.id = 'image-store';
-      storeDiv.style.display = 'none';
-      document.body.appendChild(storeDiv);
+  // ==========================================
+  // 11. DYNAMIC REAL CLIENT PHOTO INJECTION
+  // ==========================================
+  const pngKeys = [
+    'photo_academy_certificate_ceremony',
+    'photo_botox_injection_close',
+    'photo_career_launch_diploma',
+    'photo_gallery_clinic_reception',
+    'photo_gallery_doctor_consultation',
+    'photo_gallery_graduation_group',
+    'photo_gallery_skincare_products',
+    'photo_gallery_student_practicing',
+    'photo_gallery_treatment_room_wide',
+    'photo_laser_machine_luxury',
+    'result_acne_scar_reduction_stages',
+    'result_active_acne_clearance',
+    'result_dental_smile_makeover',
+    'result_melasma_pigmentation_cheek',
+    'result_pigmentation_and_under_eye_dark_circles',
+    'result_severe_acne_and_pigmentation_female',
+    'result_wellness_iv_drip'
+  ];
 
-      for (const [key, base64Src] of Object.entries(data)) {
-        const img = document.createElement('img');
-        img.id = `store-${key}`;
-        img.src = base64Src;
-        storeDiv.appendChild(img);
-      }
+  const getImgSrc = (key) => {
+    const ext = pngKeys.includes(key) ? 'png' : 'jpg';
+    return `images/${key}.${ext}`;
+  };
 
-      const getImgSrc = (key) => {
-        const img = document.getElementById(`store-${key}`);
-        return img ? img.src : '';
-      };
+  // Create hidden store element for check.js compatibility
+  const storeDiv = document.createElement('div');
+  storeDiv.id = 'image-store';
+  storeDiv.style.display = 'none';
+  document.body.appendChild(storeDiv);
 
       // 1. DYNAMIC LOGOS, FAVICON & HERO INJECTION
       const heroBgElement = document.getElementById('hero-bg-image');
@@ -1322,8 +1335,4 @@ document.addEventListener('DOMContentLoaded', () => {
           `;
         }
       }
-    })
-    .catch(err => {
-      console.warn("Could not load real_photos.json, falling back to default placeholders.", err);
-    });
 });
