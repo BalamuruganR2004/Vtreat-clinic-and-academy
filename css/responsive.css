@@ -60,8 +60,15 @@
 /* --- TABLET (768px - 1023px) --- */
 @media (max-width: 1023px) {
   :root {
-    --nav-height: 70px;
+    --nav-height: 65px;
     --space-section: clamp(3.5rem, 3rem + 3vw, 5.5rem) !important;
+    --space-10: 2rem !important;
+    --space-12: 2.25rem !important;
+    --space-16: 2.75rem !important;
+    --space-20: 3.5rem !important;
+    --space-24: 4rem !important;
+    --space-32: 5rem !important;
+    --space-40: 6rem !important;
   }
 
   /* Navigation */
@@ -81,6 +88,48 @@
     display: flex;
     overflow-y: auto !important;
     padding: var(--space-20) var(--side-padding) !important;
+  }
+
+  /* Horizontal Signature Journey timeline stepper */
+  .sig-timeline {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    gap: var(--space-4) !important;
+    justify-content: flex-start !important;
+    padding: var(--space-4) var(--side-padding) !important;
+    width: 100% !important;
+    scrollbar-width: none;
+    border-bottom: 1px solid rgba(201, 162, 76, 0.1);
+    margin-bottom: var(--space-6) !important;
+  }
+  .sig-timeline::-webkit-scrollbar {
+    display: none;
+  }
+  .sig-timeline::before {
+    display: none !important;
+  }
+  .sig-timeline-progress {
+    display: none !important;
+  }
+  .sig-timeline-step {
+    flex: 0 0 auto !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: var(--space-2) !important;
+    width: auto !important;
+  }
+  .sig-step-label {
+    margin-top: 0 !important;
+    text-align: center !important;
+    font-size: var(--text-xs) !important;
+    white-space: nowrap !important;
+  }
+  .sig-card {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-8) !important;
   }
 
   /* Hero */
@@ -192,12 +241,24 @@
   }
 }
 
-/* --- MOBILE LARGE (481px - 767px) --- */
 @media (max-width: 767px) {
   :root {
-    --nav-height: 64px;
+    --nav-height: 56px;
     --side-padding: 1.25rem;
     --space-section: clamp(2.5rem, 2rem + 2vw, 3.5rem) !important;
+    --space-6: 1.25rem !important;
+    --space-8: 1.5rem !important;
+    --space-10: 1.75rem !important;
+    --space-12: 2rem !important;
+    --space-16: 2.25rem !important;
+    --space-20: 2.75rem !important;
+    --space-24: 3rem !important;
+    --space-32: 3.5rem !important;
+    --space-40: 4rem !important;
+  }
+
+  .hide-mobile {
+    display: none !important;
   }
 
   .hero__title {
@@ -337,6 +398,28 @@
 @media (max-width: 480px) {
   :root {
     --side-padding: 1rem;
+    --space-4: 0.85rem !important;
+    --space-5: 1rem !important;
+    --space-6: 1.15rem !important;
+    --space-8: 1.25rem !important;
+    --space-10: 1.5rem !important;
+    --space-12: 1.75rem !important;
+    --space-16: 2rem !important;
+    --space-20: 2.25rem !important;
+    --space-24: 2.5rem !important;
+    --space-32: 3rem !important;
+    --space-40: 3.5rem !important;
+  }
+
+  #navbar-logo-container {
+    width: 34px !important;
+    height: 34px !important;
+  }
+  .nav__logo span:first-child {
+    font-size: var(--text-sm) !important;
+  }
+  .nav__logo span:last-child {
+    font-size: 0.55rem !important;
   }
 
   .hero__title {

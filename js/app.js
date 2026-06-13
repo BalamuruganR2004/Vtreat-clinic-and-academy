@@ -1142,59 +1142,43 @@ document.addEventListener('DOMContentLoaded', () => {
       // ==========================================
       const sigSteps = [
         {
-          phase: "Phase 01 — Career Exploration",
-          title: "Discover Clinic & Academy Menu",
-          desc: "Explore advanced cosmetic dermatology, clinical cosmetology, and PMU pathways. Discover the V-Treat dual ecosystem combining doctor-supervised treatments with high-end vocational courses designed to elevate your future.",
-          metric1Val: "50+", metric1Lbl: "Aesthetic Services",
-          metric2Val: "12+", metric2Lbl: "Curriculums",
+          phase: "Phase 01 — Theoretical Foundations",
+          title: "Learn Advanced Cosmetology",
+          desc: "Master advanced cosmetic science, clinical theory, and facial anatomy through structured lectures personally designed and led by expert MBBS doctors.",
+          metric1Val: "12+ Modules", metric1Lbl: "Theoretical Depth",
+          metric2Val: "Doctor-Led", metric2Lbl: "Supervised Lectures",
           photoKey: "photo_classroom_wide_all_students"
         },
         {
-          phase: "Phase 02 — Institutional Quality",
-          title: "MBBS Doctor Supervision",
-          desc: "Build confidence under the direct guidance of practicing medical professionals. Our academy ensures that every treatment parameters and clinical protocols are audited to guarantee hospital-grade safety.",
-          metric1Val: "100%", metric1Lbl: "Doctor Supervised",
-          metric2Val: "ISO 9001", metric2Lbl: "Quality Certified",
-          photoKey: "photo_founder_official_portrait"
-        },
-        {
-          phase: "Phase 03 — Practical Case Studies",
-          title: "Clinical Patient Exposure",
-          desc: "Bridge theory and practice by working on real clinical cases. Observe treatments of active acne, laser resurfacing, and microblading in real-time, building a premium clinical portfolio.",
+          phase: "Phase 02 — Hands-on Practice",
+          title: "Train on Real Patients",
+          desc: "Bridge theory and practice inside a fully functioning live clinic. Observe and perform active acne treatments, chemical peels, and lasers under expert guidance.",
           metric1Val: "Real Patients", metric1Lbl: "Hands-on Exposure",
-          metric2Val: "2000+", metric2Lbl: "Happy Patients",
+          metric2Val: "2000+", metric2Lbl: "Clinical Cases",
           photoKey: "photo_clinical_training_ring_light"
         },
         {
-          phase: "Phase 04 — Valid Credentials",
-          title: "Skill TN Approved Certification",
-          desc: "Graduate with credentials that open doors. V-Treat provides government-recognized and board-certified vocational certifications that validate your clinical expertise nationally.",
-          metric1Val: "State Approved", metric1Lbl: "TN Skill Board",
-          metric2Val: "MSME", metric2Lbl: "Registered Institute",
+          phase: "Phase 03 — Official Credentials",
+          title: "Graduate with Certification",
+          desc: "Receive government-recognized and board-certified Skill TN vocational diplomas and ISO certifications that validate your aesthetic skills across India.",
+          metric1Val: "Skill TN", metric1Lbl: "Approved Diploma",
+          metric2Val: "MSME / ISO", metric2Lbl: "Registered Quality",
           photoKey: "photo_career_launch_diploma"
         },
         {
-          phase: "Phase 05 — Industry Integration",
-          title: "Elite Alumni Networks",
-          desc: "Tap into our placement portal linking you to top cosmetic hospitals, skin clinics, and premium studios across tier-1 cities, ensuring a direct entry into a high-paying job market.",
-          metric1Val: "95%", metric1Lbl: "Placement Success",
-          metric2Val: "12+", metric2Lbl: "Hiring Partners",
+          phase: "Phase 04 — Career Opportunities",
+          title: "Get Placed in Top Clinics",
+          desc: "Access our exclusive placement portal connecting graduates to tier-1 cosmetic hospitals, laser centers, and premium medical spas across India.",
+          metric1Val: "95% Success", metric1Lbl: "Placement Portal",
+          metric2Val: "Top Tier", metric2Lbl: "Hiring Partners",
           photoKey: "photo_graduation_dr_kokila"
         },
         {
-          phase: "Phase 06 — Business Setup",
-          title: "Entrepreneurship Mentorship",
-          desc: "Launch your independent practice with confidence. Receive comprehensive guidance on laser machine procurement, clinical licensing, treatment pricing structures, and local marketing setups.",
-          metric1Val: "1-on-1 Guidance", metric1Lbl: "Doctor Mentorship",
-          metric2Val: "Sourcing", metric2Lbl: "Machine Sourcing",
-          photoKey: "photo_theory_class_laptop"
-        },
-        {
-          phase: "Phase 07 — Professional Growth",
-          title: "Scale and Thrive",
-          desc: "Scale your revenue by offering premium, cash-only aesthetic and dental procedures. V-Treat alumni report immediate earnings growth, starting independent salons or expanding existing dental/medical clinics.",
-          metric1Val: "3 Months Avg.", metric1Lbl: "Launch Window",
-          metric2Val: "High ROI", metric2Lbl: "Cash Flow Growth",
+          phase: "Phase 05 — Practice Setup",
+          title: "Launch Independent Practice",
+          desc: "Establish your own successful clinic or beauty salon with 1-on-1 expert guidance on medical machine sourcing, clinical licensing, and marketing setup.",
+          metric1Val: "1-on-1 Guidance", metric1Lbl: "Startup Mentorship",
+          metric2Val: "High ROI", metric2Lbl: "Business Scaling",
           photoKey: "photo_graduation_dr_prathiksha"
         }
       ];
