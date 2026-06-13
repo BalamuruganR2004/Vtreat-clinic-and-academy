@@ -745,6 +745,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   function appendMessage(sender, text) {
+    if (!messagesContainer) return;
     const msgDiv = document.createElement('div');
     msgDiv.className = `ai-msg ai-msg--${sender}`;
     
@@ -764,6 +765,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function showTypingIndicator() {
+    if (!messagesContainer) return null;
     const typingDiv = document.createElement('div');
     typingDiv.className = 'ai-msg ai-msg--bot typing-indicator';
     typingDiv.innerHTML = `
@@ -851,34 +853,44 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Wire up initial quick replies buttons once on load
+  if (repliesContainer) {
+    const initBtns = repliesContainer.querySelectorAll('.ai-quick-btn');
+    initBtns.forEach(btn => {
+      const val = btn.getAttribute('data-value');
+      btn.addEventListener('click', () => {
+        appendMessage('user', btn.textContent);
+        if (val === 'join') handleNode('join');
+        else if (val === 'book') handleNode('book');
+        else if (val === 'fees') handleNode('fees');
+        else if (val === 'whatsapp') handleNode('whatsapp_general');
+      });
+    });
+  }
+
   // Wire up chatbot open/close
   if (chatbotToggle && chatbotPanel) {
-    chatbotToggle.addEventListener('click', () => {
-      const isOpen = chatbotPanel.style.display === 'flex';
-      chatbotPanel.style.display = isOpen ? 'none' : 'flex';
-      
-      // If opening and it is first load, wire up initial buttons
-      if (!isOpen && messagesContainer.children.length <= 1) {
-        const initBtns = repliesContainer.querySelectorAll('.ai-quick-btn');
-        initBtns.forEach(btn => {
-          const val = btn.getAttribute('data-value');
-          btn.addEventListener('click', () => {
-            appendMessage('user', btn.textContent);
-            if (val === 'join') handleNode('join');
-            else if (val === 'book') handleNode('book');
-            else if (val === 'fees') handleNode('fees');
-            else if (val === 'whatsapp') handleNode('whatsapp_general');
-          });
-        });
-      }
+    chatbotToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      chatbotPanel.classList.toggle('is-open');
     });
   }
 
   if (chatbotClose && chatbotPanel) {
-    chatbotClose.addEventListener('click', () => {
-      chatbotPanel.style.display = 'none';
+    chatbotClose.addEventListener('click', (e) => {
+      e.stopPropagation();
+      chatbotPanel.classList.remove('is-open');
     });
   }
+
+  // Close chatbot when clicking outside
+  document.addEventListener('click', (e) => {
+    if (chatbotPanel && chatbotPanel.classList.contains('is-open')) {
+      if (!chatbotPanel.contains(e.target) && (!chatbotToggle || !chatbotToggle.contains(e.target))) {
+        chatbotPanel.classList.remove('is-open');
+      }
+    }
+  });
 
   if (chatbotSend) {
     chatbotSend.addEventListener('click', handleUserInput);
