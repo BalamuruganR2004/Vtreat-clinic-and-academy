@@ -2239,11 +2239,14 @@ p {
 
 /* Footer bottom */
 .footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: var(--space-6) 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--space-8) 0;
   flex-wrap: wrap;
+  font-size: var(--text-xs);
+  color: rgba(255, 255, 255, 0.4);
   gap: var(--space-4);
 }
 
