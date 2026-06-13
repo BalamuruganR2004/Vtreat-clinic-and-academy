@@ -1,0 +1,2291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!-- SEO Best Practices -->
+  <title>V-Treat Clinic & Academy — Advanced Aesthetic Medicine & Professional Cosmetology Training | Madurai</title>
+  <meta name="description" content="V-Treat Clinic & Academy in Madurai, Tamil Nadu, India, offers doctor-led premium aesthetic treatments (skin, hair, laser, PMU, dental) and certified vocational training for medical and non-medical professionals under MBBS supervision.">
+  <meta name="keywords" content="Aesthetic Clinic Madurai, Cosmetology Academy Madurai, PMU Certification, Hair Transplant Madurai, Skin Care Clinic Madurai, Laser Training, Dental Care, Dr. Aishwarya Selvam">
+  <meta name="author" content="V-Treat Clinic & Academy">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:title" content="V-Treat Clinic & Academy — Aesthetic Care & Cosmetology Education">
+  <meta property="og:description" content="Doctor-led aesthetic clinic and professional training academy in Madurai. Train on real patients inside a live clinic under MBBS Doctor supervision.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vtreatclinicacademy.com/">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <!-- CDNs for CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Styling System -->
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/main.css?v=10">
+  <link rel="stylesheet" href="css/responsive.css">
+  
+  <style>
+    /* Scrolling Marquee CSS */
+    .marquee-container {
+      overflow: hidden;
+      background: var(--color-plum-light);
+      color: var(--color-gold-accent);
+      padding: var(--space-6) 0;
+      border-top: 1px solid var(--color-border-gold);
+      border-bottom: 1px solid var(--color-border-gold);
+      white-space: nowrap;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .marquee-content {
+      display: inline-flex;
+      gap: var(--space-12);
+      animation: marqueeLine 35s linear infinite;
+    }
+    .marquee-item {
+      font-family: var(--font-heading);
+      font-size: var(--text-lg);
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: var(--space-6);
+    }
+    .marquee-divider {
+      color: var(--color-gold);
+      font-size: var(--text-sm);
+    }
+    @keyframes marqueeLine {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    
+    /* Draggable handle icon */
+    .ba-card__divider::before {
+      content: '\f337';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      color: var(--color-plum);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Extra helper styles for timelines & lists */
+    .journey__step-number {
+      font-family: var(--font-heading);
+      font-size: var(--text-6xl);
+      color: var(--color-border-gold);
+      line-height: 1;
+      font-weight: 300;
+      margin-bottom: var(--space-2);
+    }
+    .admission-pathway {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: var(--space-6);
+      position: relative;
+      margin-top: var(--space-12);
+    }
+    .admission-pathway::after {
+      content: '';
+      position: absolute;
+      top: 35px;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+      z-index: 1;
+    }
+    .admission-step {
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+    .admission-step__number {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: var(--color-white);
+      border: 1px solid var(--color-border-gold);
+      color: var(--color-primary);
+      font-family: var(--font-heading);
+      font-size: var(--text-xl);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--space-4);
+      box-shadow: var(--shadow-sm);
+      transition: all var(--duration-base);
+    }
+    .admission-step:hover .admission-step__number {
+      background: var(--color-gold);
+      color: var(--color-plum);
+      box-shadow: var(--shadow-gold);
+      transform: scale(1.05);
+    }
+    .admission-step__title {
+      font-size: var(--text-base);
+      font-weight: 600;
+      color: var(--color-plum);
+      margin-bottom: var(--space-2);
+    }
+    .admission-step__desc {
+      font-size: var(--text-xs);
+      color: var(--color-text-muted);
+      max-width: 180px;
+      margin: 0 auto;
+    }
+    @media (max-width: 1023px) {
+      .admission-pathway {
+        grid-template-columns: 1fr;
+        gap: var(--space-10);
+      }
+      .admission-pathway::after {
+        display: none;
+      }
+      .journey-row, .admission-grid-container {
+        grid-template-columns: 1fr !important;
+        gap: var(--space-8) !important;
+      }
+      .journey-row > div {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Custom Luxury Cursor -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress"></div>
+
+  <!-- SECTION 1 — CINEMATIC LOADER -->
+  <div class="loader" id="loader">
+    <!-- Cinematic Loader Orbiting Logo -->
+    <div class="loader-logo-wrapper" style="position: relative; width: 140px; height: 140px; margin-bottom: var(--space-8); display: flex; align-items: center; justify-content: center;">
+      <!-- Orbit ring -->
+      <div class="loader-orbit" style="position: absolute; inset: 0; border: 2px dashed var(--color-gold); border-radius: 50%; animation: spinOrbit 12s linear infinite; opacity: 0.65;"></div>
+      <!-- Logo container -->
+      <div id="loader-logo-container" class="loader-logo-badge" style="width: 100px; height: 100px; border-radius: 50%; overflow: hidden; border: 3px solid var(--color-gold); background: var(--color-white); box-shadow: 0 0 25px rgba(201, 162, 76, 0.4); animation: pulseBreathing 4s ease-in-out infinite; display: flex; align-items: center; justify-content: center;">
+        <!-- Dynamic image injected here -->
+      </div>
+    </div>
+    <div class="loader__logo" id="loader-logo">V-TREAT <span>CLINIC & ACADEMY</span></div>
+    <div class="loader__bar-track">
+      <div class="loader__bar-fill" id="loader-fill"></div>
+    </div>
+    <div class="loader__tagline" id="loader-tagline">Learn &bull; Heal &bull; Lead</div>
+    <div style="margin-top: 10px; color: var(--color-gold-accent); font-family: var(--font-body); font-size: var(--text-sm);" id="loader-percent">0%</div>
+  </div>
+
+  <!-- SECTION 2 — STICKY NAVIGATION BAR -->
+  <nav class="nav" id="navbar">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo" style="display: flex; align-items: center; gap: 12px;">
+        <div id="navbar-logo-container" style="width: 40px; height: 40px; border-radius: 50%; overflow: hidden; border: 2px solid var(--color-gold); background: var(--color-white); flex-shrink: 0; display: flex; align-items: center; justify-content: center;"></div>
+        <div style="display: flex; flex-direction: column;">
+          <span style="font-weight: 300; line-height: 1.2;">V-TREAT</span>
+          <span style="font-family: var(--font-body); font-size: 0.65rem; letter-spacing: 0.1em; color: var(--color-gold); line-height: 1.2;">CLINIC & ACADEMY</span>
+        </div>
+      </a>
+      <div class="nav__links">
+        <a href="#about" class="nav__link">About</a>
+        <a href="#academy" class="nav__link">Academy</a>
+        <a href="#treatments" class="nav__link">Treatments</a>
+        <a href="#results" class="nav__link">Results</a>
+        <a href="#contact" class="nav__link">Contact</a>
+      </div>
+      <div style="display: flex; gap: var(--space-4); align-items: center;">
+        <a href="#contact" class="btn btn--outline nav__cta-secondary magnetic-btn" style="color: inherit; border-color: inherit; padding: var(--space-2) var(--space-4); font-size: var(--text-xs);">Book Appointment</a>
+        <a href="#contact" class="nav__cta">Enroll Now</a>
+      </div>
+      <button class="nav__menu-toggle" id="menu-toggle" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="nav__mobile-menu" id="mobile-menu">
+    <a href="#about" class="nav__link" onclick="toggleMobileMenu()">About</a>
+    <a href="#academy" class="nav__link" onclick="toggleMobileMenu()">Academy</a>
+    <a href="#treatments" class="nav__link" onclick="toggleMobileMenu()">Treatments</a>
+    <a href="#results" class="nav__link" onclick="toggleMobileMenu()">Results</a>
+    <a href="#contact" class="nav__link" onclick="toggleMobileMenu()">Contact</a>
+    <a href="#contact" class="btn btn--primary magnetic-btn" style="margin-top: 20px; color: var(--color-plum);" onclick="toggleMobileMenu()">Enroll Now</a>
+    <a href="#contact" class="btn btn--secondary magnetic-btn" onclick="toggleMobileMenu()">Book Appointment</a>
+  </div>
+
+  <!-- SECTION 3 — HERO SECTION -->
+  <header class="hero">
+    <div class="hero__bg">
+      <img id="hero-bg-image" class="hero__bg-image" src="" alt="Aesthetic Academy Background" style="display: none;" />
+      <div class="hero__gradient"></div>
+    </div>
+    
+    <!-- Floating Glass Orbs -->
+    <div class="hero__orb hero__orb--1"></div>
+    <div class="hero__orb hero__orb--2"></div>
+    <div class="hero__orb hero__orb--3"></div>
+    
+    <div class="container hero__content stagger-children is-visible">
+      <div class="hero__badge hero-reveal">
+        <span class="hero__badge-dot"></span>
+        India's Premier Aesthetic Academy and Clinic, Madurai
+      </div>
+      <h1 class="hero__title hero-reveal">
+        Build Your Career in <br><em>Aesthetic Medicine</em>
+      </h1>
+      <p class="hero__subtitle hero-reveal">
+        Train on real patients, graduate certified, and become career-ready. The only academy in Madurai where students train on real patients inside a live clinic, supervised under MBBS doctor mentorship.
+      </p>
+      
+      <div class="hero__ctas hero-reveal">
+        <a href="#academy" class="btn btn--primary magnetic-btn">Enroll in Academy</a>
+        <a href="#contact" class="btn btn--secondary magnetic-btn">Book Clinic Appointment</a>
+      </div>
+
+      <div class="hero__trust hero-reveal">
+        <div class="hero__trust-item">
+          <div class="hero__trust-number" id="hero-grad-counter">500+</div>
+          <div class="hero__trust-label">Academy Graduates</div>
+        </div>
+        <div class="hero__trust-item">
+          <div class="hero__trust-number">MBBS</div>
+          <div class="hero__trust-label">Doctor Supervised</div>
+        </div>
+        <div class="hero__trust-item">
+          <div class="hero__trust-number">Live</div>
+          <div class="hero__trust-label">Patient Training</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="hero__scroll">
+      <div class="hero__scroll-line"></div>
+      <span class="hero__scroll-text">Scroll to Explore</span>
+    </div>
+  </header>
+
+  <!-- SECTION 4 — TRUST STATISTICS STRIP -->
+  <section class="stats section-divider">
+    <div class="container">
+      <div class="stats__grid">
+        <div class="stats__item">
+          <div class="stats__number" data-target="500">0<span>+</span></div>
+          <div class="stats__label">Academy Graduates</div>
+        </div>
+        <div class="stats__item">
+          <div class="stats__number" data-target="8">0<span>+</span></div>
+          <div class="stats__label">Certification Courses</div>
+        </div>
+        <div class="stats__item">
+          <div class="stats__number" data-target="2000">0<span>+</span></div>
+          <div class="stats__label">Happy Patients</div>
+        </div>
+        <div class="stats__item">
+          <div class="stats__number" data-target="98">0<span>%</span></div>
+          <div class="stats__label">Satisfaction Rate</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5 — CONTINUOUSLY SCROLLING MARQUEE STRIP -->
+  <div class="marquee-container">
+    <div class="marquee-content">
+      <div class="marquee-item">Clinical Cosmetology <span class="marquee-divider">&bull;</span></div>
+      <div class="marquee-item">HydraFacial <span class="marquee-divider">&bull;</span></div>
+      <div class="marquee-item">PMU Certification <span class="marquee-divider">&bull;</span></div>
+      <div class="marquee-item">Laser Training <span class="marquee-divider">&bull;</span></div>
+      <div class="marquee-item">Hair Restoration <span class="marquee-divider">&bull;</span></div>
+      <div class="marquee-item">Eyelash Extension <span class="marquee-divider">&bull;</span></div>
+      <div class="marquee-item">Korean Skin Treatment <span class="marquee-divider">&bull;</span></div>
+      <div class="marquee-item">Microblading <span class="marquee-divider">&bull;</span></div>
+      <div class="marquee-item">Botox and Fillers <span class="marquee-divider">&bull;</span></div>
+      <div class="marquee-item">Beauty Entrepreneurship <span class="marquee-divider">&bull;</span></div>
+      <div class="marquee-item">Chemical Peels <span class="marquee-divider">&bull;</span></div>
+      <div class="marquee-item">Anti-Aging <span class="marquee-divider">&bull;</span></div>
+      <!-- Loop duplicate for seamless scrolling -->
+      <div class="marquee-item">Clinical Cosmetology <span class="marquee-divider">&bull;</span></div>
+      <div class="marquee-item">HydraFacial <span class="marquee-divider">&bull;</span></div>
+      <div class="marquee-item">PMU Certification <span class="marquee-divider">&bull;</span></div>
+      <div class="marquee-item">Laser Training <span class="marquee-divider">&bull;</span></div>
+      <div class="marquee-item">Hair Restoration <span class="marquee-divider">&bull;</span></div>
+      <div class="marquee-item">Eyelash Extension <span class="marquee-divider">&bull;</span></div>
+      <div class="marquee-item">Korean Skin Treatment <span class="marquee-divider">&bull;</span></div>
+      <div class="marquee-item">Microblading <span class="marquee-divider">&bull;</span></div>
+      <div class="marquee-item">Botox and Fillers <span class="marquee-divider">&bull;</span></div>
+      <div class="marquee-item">Beauty Entrepreneurship <span class="marquee-divider">&bull;</span></div>
+      <div class="marquee-item">Chemical Peels <span class="marquee-divider">&bull;</span></div>
+      <div class="marquee-item">Anti-Aging <span class="marquee-divider">&bull;</span></div>
+    </div>
+  </div>
+
+  <!-- SECTION 6 — ABOUT US SECTION (EDITORIAL MANIFESTO) -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__image-wrap" id="about-image-container">
+          <!-- Image 4 loaded dynamically -->
+          <div style="background: var(--color-plum); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; border-radius: var(--radius-2xl);">
+            <span class="text-gold" style="font-size: 3rem;"><i class="fa-solid fa-user-doctor"></i></span>
+          </div>
+          <div class="about__image-accent"></div>
+        </div>
+        <div class="about__content">
+          <span class="section-label">About Us</span>
+          <h2 class="section-title">Clinical Authority & Luxury Artistry</h2>
+          <div class="about__text">
+            <p>
+              With a team of expert professionals holding more than 10 years of experience, we are dedicated to offering advanced treatments with personalized care and attention to every individual. Our goal is to combine modern technology with compassionate service, ensuring that each client experiences the highest standards of safety, comfort, and results. Whether you are looking to enhance your smile, rejuvenate your skin, restore your hair, explore beauty with PMU, or improve your overall well-being, V-Treat Clinic & Academy is here to provide holistic care that empowers you to look and feel your best. Our mission is to deliver exceptional patient experiences through cutting-edge technology, innovative treatments, and a commitment to excellence. We strive to build long-lasting relationships with our patients, founded on trust, empathy, and open communication.
+            </p>
+            <p style="margin-top: 15px;">
+              Explore our website to discover the full range of services we offer, meet our team, and learn more about our approach to wellness. Thank you for choosing V-Treat Clinic. We look forward to welcoming you to our clinic soon!
+            </p>
+          </div>
+          <div class="about__features">
+            <div class="about__feature">
+              <span class="about__feature-icon"><i class="fa-solid fa-microchip"></i></span>
+              <div>
+                <h4 style="font-weight:600; margin-bottom: 5px; color: var(--color-plum);">Excellence & Innovation</h4>
+                <p style="font-size: var(--text-sm); color: var(--color-text-muted);">Harnessing the latest aesthetic technology for beautiful, long-lasting outcomes.</p>
+              </div>
+            </div>
+            <div class="about__feature">
+              <span class="about__feature-icon"><i class="fa-solid fa-handshake"></i></span>
+              <div>
+                <h4 style="font-weight:600; margin-bottom: 5px; color: var(--color-plum);">Trust & Transparency</h4>
+                <p style="font-size: var(--text-sm); color: var(--color-text-muted);">Building lifetime relationships with clients through medical honesty.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- SECTION 7 — SERVICES OVERVIEW GRID -->
+  <section class="treatments section-divider" style="background: var(--color-cream-dark); padding: var(--space-24) 0;">
+    <div class="container container--wide">
+      <div style="text-align: center; margin-bottom: var(--space-16);">
+        <span class="section-label">Services Menu</span>
+        <h2 class="section-title">Clinical Expertise, Head to Toe</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">Explore our core specialties representing the absolute peak of modern aesthetic and clinical medicine.</p>
+      </div>
+      <div class="treatments__grid">
+        
+        <!-- Dental Card -->
+        <div class="treatment-card specular-highlight">
+          <div id="treatment-img-dental" class="treatment-card__image-wrap">
+            <div class="treatment-card__overlay"></div>
+          </div>
+          <div class="treatment-card__icon"><i class="fa-solid fa-tooth"></i></div>
+          <div class="treatment-card__body">
+            <div class="treatment-card__category">General & Cosmetic</div>
+            <h3 class="treatment-card__title">Dental Care</h3>
+            <p class="treatment-card__desc">From professional consultations and smile designing to advanced implants and root canal therapy.</p>
+            <a href="#contact" class="treatment-card__link">Book Consultation <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Skin Card -->
+        <div class="treatment-card specular-highlight">
+          <div id="treatment-img-skin" class="treatment-card__image-wrap">
+            <div class="treatment-card__overlay"></div>
+          </div>
+          <div class="treatment-card__icon"><i class="fa-solid fa-spa"></i></div>
+          <div class="treatment-card__body">
+            <div class="treatment-card__category">Advanced Aesthetics</div>
+            <h3 class="treatment-card__title">Skin Care</h3>
+            <p class="treatment-card__desc">Premium medi-facials, Korean skin glass therapy, chemical peels, and clinical acne solutions.</p>
+            <a href="#contact" class="treatment-card__link">Book Consultation <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Hair Card -->
+        <div class="treatment-card specular-highlight">
+          <div id="treatment-img-hair" class="treatment-card__image-wrap">
+            <div class="treatment-card__overlay"></div>
+          </div>
+          <div class="treatment-card__icon"><i class="fa-solid fa-crown"></i></div>
+          <div class="treatment-card__body">
+            <div class="treatment-card__category">Trichology Clinic</div>
+            <h3 class="treatment-card__title">Hair Care</h3>
+            <p class="treatment-card__desc">Root-strengthening therapies, clinical hair restoration, scalp detox, and permanent hair transplants.</p>
+            <a href="#contact" class="treatment-card__link">Book Consultation <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Laser Card -->
+        <div class="treatment-card specular-highlight">
+          <div id="treatment-img-laser" class="treatment-card__image-wrap">
+            <div class="treatment-card__overlay"></div>
+          </div>
+          <div class="treatment-card__icon"><i class="fa-solid fa-bolt"></i></div>
+          <div class="treatment-card__body">
+            <div class="treatment-card__category">FDA Approved Tech</div>
+            <h3 class="treatment-card__title">Laser Treatments</h3>
+            <p class="treatment-card__desc">FDA-approved laser hair removal, fractional skin resurfacing, IPL therapy, and pigment corrections.</p>
+            <a href="#contact" class="treatment-card__link">Book Consultation <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- PMU Card -->
+        <div class="treatment-card specular-highlight">
+          <div id="treatment-img-pmu" class="treatment-card__image-wrap">
+            <div class="treatment-card__overlay"></div>
+          </div>
+          <div class="treatment-card__icon"><i class="fa-solid fa-pen-nib"></i></div>
+          <div class="treatment-card__body">
+            <div class="treatment-card__category">Semi-Permanent</div>
+            <h3 class="treatment-card__title">Permanent Makeup (PMU)</h3>
+            <p class="treatment-card__desc">Perfect eyebrow microblading/shading, lip blush tinting, defined eyeliner, and scar camouflage.</p>
+            <a href="#contact" class="treatment-card__link">Book Consultation <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Wellness Card -->
+        <div class="treatment-card specular-highlight">
+          <div id="treatment-img-wellness" class="treatment-card__image-wrap">
+            <div class="treatment-card__overlay"></div>
+          </div>
+          <div class="treatment-card__icon"><i class="fa-solid fa-heart-pulse"></i></div>
+          <div class="treatment-card__body">
+            <div class="treatment-card__category">Holistic Health</div>
+            <h3 class="treatment-card__title">Wellness</h3>
+            <p class="treatment-card__desc">Advanced body contouring, fat reduction (CoolSculpting), stress management, and nutrition planning.</p>
+            <a href="#contact" class="treatment-card__link">Book Consultation <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8 — WHY CHOOSE US SECTION (8 POINTS GRID) -->
+  <section class="why-choose">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: var(--space-16);">
+        <span class="section-label">Trust Factors</span>
+        <h2 class="section-title">Why V-Treat Stands Out</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">Delivering certified quality, doctor supervision, and visible natural-looking results.</p>
+      </div>
+      <div class="why-choose__grid">
+        
+        <!-- Point 1 -->
+        <div class="why-card">
+          <div class="why-card__num">01</div>
+          <h3 class="why-card__title">Comprehensive Multi-Specialty</h3>
+          <p class="why-card__desc">All your clinical aesthetic, dental, and holistic wellness needs met under one trusted roof.</p>
+        </div>
+
+        <!-- Point 2 -->
+        <div class="why-card">
+          <div class="why-card__num">02</div>
+          <h3 class="why-card__title">Expert Doctors & Professionals</h3>
+          <p class="why-card__desc">MBBS doctor-led medical supervision with a team holding over 10 years of clinical experience.</p>
+        </div>
+
+        <!-- Point 3 -->
+        <div class="why-card">
+          <div class="why-card__num">03</div>
+          <h3 class="why-card__title">Advanced Technology</h3>
+          <p class="why-card__desc">Utilizing FDA-approved, cutting-edge aesthetic devices for safe, predictable results.</p>
+        </div>
+
+        <!-- Point 4 -->
+        <div class="why-card">
+          <div class="why-card__num">04</div>
+          <h3 class="why-card__title">Personalized Treatment Plans</h3>
+          <p class="why-card__desc">We design custom aesthetic and clinical protocols specifically for your unique facial profile and goals.</p>
+        </div>
+
+        <!-- Point 5 -->
+        <div class="why-card">
+          <div class="why-card__num">05</div>
+          <h3 class="why-card__title">Hygiene & Safety First</h3>
+          <p class="why-card__desc">Hospital-grade sterilization and strict clinical protocols ensuring a pristine environment.</p>
+        </div>
+
+        <!-- Point 6 -->
+        <div class="why-card">
+          <div class="why-card__num">06</div>
+          <h3 class="why-card__title">Training & Certification</h3>
+          <p class="why-card__desc">Vocational training courses approved by government bodies, providing valid credentials.</p>
+        </div>
+
+        <!-- Point 7 -->
+        <div class="why-card">
+          <div class="why-card__num">07</div>
+          <h3 class="why-card__title">Natural-Looking Results</h3>
+          <p class="why-card__desc">Our aesthetic philosophy prioritizes subtle, elegant enhancements rather than artificial looks.</p>
+        </div>
+
+        <!-- Point 8 -->
+        <div class="why-card">
+          <div class="why-card__num">08</div>
+          <h3 class="why-card__title">Trusted by Hundreds</h3>
+          <p class="why-card__desc">A solid track record of client satisfaction, positive reviews, and successful student careers.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 9 — WHY V-TREAT ACADEMY SECTION -->
+  <section class="academy" id="academy" style="background: var(--color-plum); color: var(--color-white); position: relative; overflow: hidden; padding: var(--space-section) 0;">
+    <!-- Ambient Orb background -->
+    <div style="position: absolute; width: 300px; height: 300px; top: 10%; right: -5%; border-radius: 50%; background: radial-gradient(circle, rgba(201,162,76,0.1) 0%, transparent 70%); pointer-events: none;"></div>
+    
+    <div class="container">
+      <div style="text-align: center; margin-bottom: var(--space-16);">
+        <span class="section-label" style="color: var(--color-gold-accent);">Academy Overview</span>
+        <h2 class="section-title" style="color: var(--color-white); font-weight: 300;">Launch Your Career in Aesthetic Medicine</h2>
+        <p class="section-subtitle" style="color: rgba(255,255,255,0.6); margin: 0 auto;">Learn inside a live clinic, work on real patients, and get certified under medical supervision.</p>
+      </div>
+
+      <!-- Three Bold Value Statements -->
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); margin-bottom: var(--space-16); text-align: center;">
+        <div id="usp-training-card" style="background: var(--color-plum-light); padding: var(--space-6); border-radius: var(--radius-lg); border: 1px solid var(--color-border-gold); transition: background 0.4s ease, transform 0.4s ease; background-size: cover; background-position: center;">
+          <div style="color: var(--color-gold-accent); font-size: 2rem; margin-bottom: var(--space-3);"><i class="fa-solid fa-hospital-user"></i></div>
+          <h3 style="color: var(--color-white); font-size: var(--text-lg); margin-bottom: var(--space-2);">Live Clinical Training</h3>
+          <p style="font-size: var(--text-sm); color: rgba(255,255,255,0.7); max-width: 100%;">Practice on live patients under physician supervision, not just synthetic skins or mannequins.</p>
+        </div>
+        <div id="usp-mentorship-card" style="background: var(--color-plum-light); padding: var(--space-6); border-radius: var(--radius-lg); border: 1px solid var(--color-border-gold); transition: background 0.4s ease, transform 0.4s ease; background-size: cover; background-position: center;">
+          <div style="color: var(--color-gold-accent); font-size: 2rem; margin-bottom: var(--space-3);"><i class="fa-solid fa-user-doctor"></i></div>
+          <h3 style="color: var(--color-white); font-size: var(--text-lg); margin-bottom: var(--space-2);">MBBS Doctor Mentorship</h3>
+          <p style="font-size: var(--text-sm); color: rgba(255,255,255,0.7); max-width: 100%;">Learn clinical safety, facial anatomy, and dose calculations directly from practicing doctors.</p>
+        </div>
+        <div style="background: var(--color-plum-light); padding: var(--space-6); border-radius: var(--radius-lg); border: 1px solid var(--color-border-gold); transition: background 0.4s ease, transform 0.4s ease;">
+          <div style="color: var(--color-gold-accent); font-size: 2rem; margin-bottom: var(--space-3);"><i class="fa-solid fa-graduation-cap"></i></div>
+          <h3 style="color: var(--color-white); font-size: var(--text-lg); margin-bottom: var(--space-2);">Career-Ready Graduation</h3>
+          <p style="font-size: var(--text-sm); color: rgba(255,255,255,0.7); max-width: 100%;">Complete certifications approved by Skill TN, ready to set up your own clinic or get placed instantly.</p>
+        </div>
+      </div>
+
+      <!-- Side-by-side Track Panels -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-10); margin-bottom: var(--space-16);">
+        <!-- Medical Track -->
+        <div style="background: var(--color-plum-light); padding: var(--space-8); border-radius: var(--radius-xl); border: 1px solid var(--color-gold);">
+          <div style="display: inline-block; padding: var(--space-1) var(--space-3); background: rgba(201,162,76,0.15); border: 1px solid var(--color-gold); border-radius: var(--radius-sm); color: var(--color-gold-accent); font-size: var(--text-xs); font-weight: 600; text-transform: uppercase; margin-bottom: var(--space-4);">Medical Track</div>
+          <h3 style="color: var(--color-white); font-size: var(--text-2xl); margin-bottom: var(--space-4);">For Qualified Health Professionals</h3>
+          <p style="color: rgba(255,255,255,0.7); margin-bottom: var(--space-6);">Advanced clinical cosmetology, laser procedures, and cosmetic injectables training.</p>
+          <h4 style="color: var(--color-gold); font-size: var(--text-sm); text-transform: uppercase; font-weight: 600; margin-bottom: var(--space-3);">Eligible Qualifications:</h4>
+          <ul style="color: rgba(255,255,255,0.8); display: flex; flex-direction: column; gap: var(--space-2); font-size: var(--text-sm);">
+            <li><i class="fa-solid fa-circle-check text-gold" style="margin-right: 10px;"></i> MBBS (Modern Medicine)</li>
+            <li><i class="fa-solid fa-circle-check text-gold" style="margin-right: 10px;"></i> BDS (Dental Surgery)</li>
+            <li><i class="fa-solid fa-circle-check text-gold" style="margin-right: 10px;"></i> BAMS / BHMS / BSMS (AYUSH Physicians)</li>
+            <li><i class="fa-solid fa-circle-check text-gold" style="margin-right: 10px;"></i> Registered Nursing & Allied Medical Graduates</li>
+          </ul>
+        </div>
+        
+        <!-- Non-Medical Track -->
+        <div style="background: var(--color-plum-light); padding: var(--space-8); border-radius: var(--radius-xl); border: 1px solid var(--color-border-gold);">
+          <div style="display: inline-block; padding: var(--space-1) var(--space-3); background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-sm); color: rgba(255,255,255,0.7); font-size: var(--text-xs); font-weight: 600; text-transform: uppercase; margin-bottom: var(--space-4);">Non-Medical Track</div>
+          <h3 style="color: var(--color-white); font-size: var(--text-2xl); margin-bottom: var(--space-4);">For Aspiring Beauty Professionals</h3>
+          <p style="color: rgba(255,255,255,0.7); margin-bottom: var(--space-6);">Professional Permanent Makeup (PMU), lash artistry, hair styling, and wellness consulting.</p>
+          <h4 style="color: var(--color-gold); font-size: var(--text-sm); text-transform: uppercase; font-weight: 600; margin-bottom: var(--space-3);">Who Can Apply:</h4>
+          <ul style="color: rgba(255,255,255,0.8); display: flex; flex-direction: column; gap: var(--space-2); font-size: var(--text-sm);">
+            <li><i class="fa-solid fa-circle-check text-gold" style="margin-right: 10px;"></i> Open to all educational backgrounds (10th / 12th pass)</li>
+            <li><i class="fa-solid fa-circle-check text-gold" style="margin-right: 10px;"></i> Salon Owners & Practicing Beauticians</li>
+            <li><i class="fa-solid fa-circle-check text-gold" style="margin-right: 10px;"></i> Make-up Artists & PMU Enthusiasts</li>
+            <li><i class="fa-solid fa-circle-check text-gold" style="margin-right: 10px;"></i> Career switchers looking to enter the beauty industry</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Outcome Stats Strip -->
+      <div style="background: var(--color-plum-light); padding: var(--space-8); border-radius: var(--radius-xl); display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); text-align: center; border: 1px solid rgba(255,255,255,0.08);">
+        <div>
+          <div style="font-family: var(--font-heading); font-size: var(--text-3xl); color: var(--color-gold-accent);">500+</div>
+          <div style="font-size: var(--text-xs); color: rgba(255,255,255,0.5); text-transform: uppercase;">Graduates Trained</div>
+        </div>
+        <div>
+          <div style="font-family: var(--font-heading); font-size: var(--text-3xl); color: var(--color-gold-accent);">12+</div>
+          <div style="font-size: var(--text-xs); color: rgba(255,255,255,0.5); text-transform: uppercase;">Hiring Partners</div>
+        </div>
+        <div>
+          <div style="font-family: var(--font-heading); font-size: var(--text-3xl); color: var(--color-gold-accent);">8+</div>
+          <div style="font-size: var(--text-xs); color: rgba(255,255,255,0.5); text-transform: uppercase;">Certified Courses</div>
+        </div>
+        <div>
+          <div style="font-family: var(--font-heading); font-size: var(--text-3xl); color: var(--color-gold-accent);">3 Months</div>
+          <div style="font-size: var(--text-xs); color: rgba(255,255,255,0.5); text-transform: uppercase;">Average Path to Income</div>
+        </div>
+      </div>
+      
+      <!-- Urgency line -->
+      <div style="text-align: center; margin-top: var(--space-8); color: var(--color-gold-accent); font-family: var(--font-heading); font-size: var(--text-base);">
+        <i class="fa-solid fa-circle-exclamation" style="margin-right: 10px;"></i> Urgent Notice: Only 12 seats are available per batch to maintain clinical safety standards.
+      </div>
+    </div>
+  </section>
+
+    <!-- SECTION 10 — ACADEMY COURSES SECTION (GRID & TABS FILTERING) -->
+  <section class="courses section-divider" style="background: var(--color-cream); padding: var(--space-24) 0;">
+    <div class="container container--wide">
+      <div style="text-align: center; margin-bottom: var(--space-16);">
+        <span class="section-label">Academy Programs</span>
+        <h2 class="section-title">Select Your Certification Path</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">Filter between Medical and Non-Medical tracks to choose your preferred learning curriculum.</p>
+      </div>
+
+      <!-- Filter tabs -->
+      <div style="display: flex; justify-content: center; gap: var(--space-4); margin-bottom: var(--space-12);" class="course-tabs">
+        <button class="btn btn--outline course-tab-btn active magnetic-btn" data-filter="all" style="padding: var(--space-2) var(--space-6); font-size: var(--text-sm);">All Courses</button>
+        <button class="btn btn--outline course-tab-btn magnetic-btn" data-filter="medical" style="padding: var(--space-2) var(--space-6); font-size: var(--text-sm);">Medical Track</button>
+        <button class="btn btn--outline course-tab-btn magnetic-btn" data-filter="non-medical" style="padding: var(--space-2) var(--space-6); font-size: var(--text-sm);">Non-Medical Track</button>
+      </div>
+
+      <!-- Course Cards Grid -->
+      <div class="courses__grid" id="courses-container">
+        
+        <!-- Course 1 -->
+        <div class="course-card specular-highlight" data-track="medical">
+          <div class="course-card__body">
+            <div class="course-card__badges">
+              <span class="course-card__badge badge--primary">Medical Track</span>
+              <span class="course-card__badge badge--accent">Popular</span>
+            </div>
+            <h3 class="course-card__title">Fellowship in Aesthetic Medicine</h3>
+            <div class="course-card__meta">
+              <span class="course-card__meta-item"><i class="fa-regular fa-clock"></i> 3 Months</span>
+              <span class="course-card__meta-item"><i class="fa-solid fa-graduation-cap"></i> MBBS, BDS, AYUSH</span>
+            </div>
+            <p class="course-card__desc">
+              Master injectables, clinical protocols, advanced skin rejuvenation, and laser procedures with intensive live client training.
+            </p>
+            <div class="course-card__footer">
+              <div class="course-card__certificate">
+                <i class="fa-solid fa-certificate"></i> Post Graduate Fellowship Certification
+              </div>
+              <a href="#contact" class="btn btn--primary course-card__cta magnetic-btn">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 2 -->
+        <div class="course-card specular-highlight" data-track="medical">
+          <div class="course-card__body">
+            <div class="course-card__badges">
+              <span class="course-card__badge badge--primary">Medical Track</span>
+              <span class="course-card__badge badge--accent">Popular</span>
+            </div>
+            <h3 class="course-card__title">PG Diploma in Clinical Cosmetology</h3>
+            <div class="course-card__meta">
+              <span class="course-card__meta-item"><i class="fa-regular fa-clock"></i> 6 Months</span>
+              <span class="course-card__meta-item"><i class="fa-solid fa-graduation-cap"></i> Medical Graduates</span>
+            </div>
+            <p class="course-card__desc">
+              Comprehensive theoretical knowledge and extensive hands-on clinical exposure covering advanced skin, hair, and cosmetic treatments.
+            </p>
+            <div class="course-card__footer">
+              <div class="course-card__certificate">
+                <i class="fa-solid fa-certificate"></i> Post Graduate Diploma in Cosmetology
+              </div>
+              <a href="#contact" class="btn btn--primary course-card__cta magnetic-btn">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 3 -->
+        <div class="course-card specular-highlight" data-track="medical">
+          <div class="course-card__body">
+            <div class="course-card__badges">
+              <span class="course-card__badge badge--primary">Medical Track</span>
+            </div>
+            <h3 class="course-card__title">Advanced Laser & Light Therapies</h3>
+            <div class="course-card__meta">
+              <span class="course-card__meta-item"><i class="fa-regular fa-clock"></i> 1 Month</span>
+              <span class="course-card__meta-item"><i class="fa-solid fa-graduation-cap"></i> Medical Grads / Nurses</span>
+            </div>
+            <p class="course-card__desc">
+              Focused practice with IPL, Nd:YAG, Diode, and CO2 fractional lasers. Learn parameter settings and clinical safety guidelines.
+            </p>
+            <div class="course-card__footer">
+              <div class="course-card__certificate">
+                <i class="fa-solid fa-certificate"></i> Certified Laser Treatment Specialist
+              </div>
+              <a href="#contact" class="btn btn--primary course-card__cta magnetic-btn">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 4 -->
+        <div class="course-card specular-highlight" data-track="medical">
+          <div class="course-card__body">
+            <div class="course-card__badges">
+              <span class="course-card__badge badge--primary">Medical Track</span>
+            </div>
+            <h3 class="course-card__title">Masterclass in Botox & Fillers</h3>
+            <div class="course-card__meta">
+              <span class="course-card__meta-item"><i class="fa-regular fa-clock"></i> 1 Month</span>
+              <span class="course-card__meta-item"><i class="fa-solid fa-graduation-cap"></i> MBBS, BDS Only</span>
+            </div>
+            <p class="course-card__desc">
+              Advanced injection techniques, facial anatomy mapping, dosage charts, and clinical complication management.
+            </p>
+            <div class="course-card__footer">
+              <div class="course-card__certificate">
+                <i class="fa-solid fa-certificate"></i> Masterclass Certificate in Injectables
+              </div>
+              <a href="#contact" class="btn btn--primary course-card__cta magnetic-btn">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 5 -->
+        <div class="course-card specular-highlight" data-track="medical">
+          <div class="course-card__body">
+            <div class="course-card__badges">
+              <span class="course-card__badge badge--primary">Medical Track</span>
+            </div>
+            <h3 class="course-card__title">Hair Restoration & Trichology</h3>
+            <div class="course-card__meta">
+              <span class="course-card__meta-item"><i class="fa-regular fa-clock"></i> 2 Months</span>
+              <span class="course-card__meta-item"><i class="fa-solid fa-graduation-cap"></i> Medical Graduates</span>
+            </div>
+            <p class="course-card__desc">
+              Scalp anatomy, hair loss diagnosis, PRP preparation, hair transplant assistance, and dandruff therapy setups.
+            </p>
+            <div class="course-card__footer">
+              <div class="course-card__certificate">
+                <i class="fa-solid fa-certificate"></i> Certificate in Clinical Trichology
+              </div>
+              <a href="#contact" class="btn btn--primary course-card__cta magnetic-btn">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 6 -->
+        <div class="course-card specular-highlight" data-track="non-medical">
+          <div class="course-card__body">
+            <div class="course-card__badges">
+              <span class="course-card__badge badge--secondary">Non-Medical</span>
+              <span class="course-card__badge badge--accent">Popular</span>
+            </div>
+            <h3 class="course-card__title">Board Certified PMU Specialist</h3>
+            <div class="course-card__meta">
+              <span class="course-card__meta-item"><i class="fa-regular fa-clock"></i> 3 Months</span>
+              <span class="course-card__meta-item"><i class="fa-solid fa-graduation-cap"></i> Open to All (10+2 pass)</span>
+            </div>
+            <p class="course-card__desc">
+              Master eyebrow microblading/shading, lip blush tinting, eyeliner tattooing, and scalp micropigmentation protocols.
+            </p>
+            <div class="course-card__footer">
+              <div class="course-card__certificate">
+                <i class="fa-solid fa-certificate"></i> Professional PMU Artist Certification
+              </div>
+              <a href="#contact" class="btn btn--primary course-card__cta magnetic-btn">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 7 -->
+        <div class="course-card specular-highlight" data-track="non-medical">
+          <div class="course-card__body">
+            <div class="course-card__badges">
+              <span class="course-card__badge badge--secondary">Non-Medical</span>
+              <span class="course-card__badge badge--highlight">Quick Career Start</span>
+            </div>
+            <h3 class="course-card__title">Microblading Masterclass</h3>
+            <div class="course-card__meta">
+              <span class="course-card__meta-item"><i class="fa-regular fa-clock"></i> 1 Month</span>
+              <span class="course-card__meta-item"><i class="fa-solid fa-graduation-cap"></i> Open to All</span>
+            </div>
+            <p class="course-card__desc">
+              Advanced brow mapping, eyebrow shading, stroke patterns, and color theory. Practice on real models under guidance.
+            </p>
+            <div class="course-card__footer">
+              <div class="course-card__certificate">
+                <i class="fa-solid fa-certificate"></i> Certified Microblading Artist
+              </div>
+              <a href="#contact" class="btn btn--primary course-card__cta magnetic-btn">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 8 -->
+        <div class="course-card specular-highlight" data-track="non-medical">
+          <div class="course-card__body">
+            <div class="course-card__badges">
+              <span class="course-card__badge badge--secondary">Non-Medical</span>
+              <span class="course-card__badge badge--highlight">Quick Career Start</span>
+            </div>
+            <h3 class="course-card__title">Advanced Korean Skin Treatments</h3>
+            <div class="course-card__meta">
+              <span class="course-card__meta-item"><i class="fa-regular fa-clock"></i> 1 Month</span>
+              <span class="course-card__meta-item"><i class="fa-solid fa-graduation-cap"></i> Open to All</span>
+            </div>
+            <p class="course-card__desc">
+              Learn Korean glass skin facials, specialized serum infusions, peel-off masks, and high-frequency device facial styling.
+            </p>
+            <div class="course-card__footer">
+              <div class="course-card__certificate">
+                <i class="fa-solid fa-certificate"></i> Korean Skin Care Specialist
+              </div>
+              <a href="#contact" class="btn btn--primary course-card__cta magnetic-btn">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 9 -->
+        <div class="course-card specular-highlight" data-track="non-medical">
+          <div class="course-card__body">
+            <div class="course-card__badges">
+              <span class="course-card__badge badge--secondary">Non-Medical</span>
+              <span class="course-card__badge badge--highlight">Quick Career Start</span>
+            </div>
+            <h3 class="course-card__title">Professional Eyelash Artistry</h3>
+            <div class="course-card__meta">
+              <span class="course-card__meta-item"><i class="fa-regular fa-clock"></i> 1 Month</span>
+              <span class="course-card__meta-item"><i class="fa-solid fa-graduation-cap"></i> Open to All</span>
+            </div>
+            <p class="course-card__desc">
+              Master classic, volume, and hybrid lash extensions, lash lifting, glue safety, styling rules, and fills.
+            </p>
+            <div class="course-card__footer">
+              <div class="course-card__certificate">
+                <i class="fa-solid fa-certificate"></i> Certified Eyelash Artist
+              </div>
+              <a href="#contact" class="btn btn--primary course-card__cta magnetic-btn">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 10 -->
+        <div class="course-card specular-highlight" data-track="non-medical">
+          <div class="course-card__body">
+            <div class="course-card__badges">
+              <span class="course-card__badge badge--secondary">Non-Medical</span>
+            </div>
+            <h3 class="course-card__title">Chemical Peels & Skin Rejuvenation</h3>
+            <div class="course-card__meta">
+              <span class="course-card__meta-item"><i class="fa-regular fa-clock"></i> 1 Month</span>
+              <span class="course-card__meta-item"><i class="fa-solid fa-graduation-cap"></i> Beauticians / Open to All</span>
+            </div>
+            <p class="course-card__desc">
+              Safe application guidelines for glycolic, salicylic, lactic, and chemical peels. Learn skin types and neutralize protocols.
+            </p>
+            <div class="course-card__footer">
+              <div class="course-card__certificate">
+                <i class="fa-solid fa-certificate"></i> Skin Rejuvenation Practitioner
+              </div>
+              <a href="#contact" class="btn btn--primary course-card__cta magnetic-btn">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 11 -->
+        <div class="course-card specular-highlight" data-track="non-medical">
+          <div class="course-card__body">
+            <div class="course-card__badges">
+              <span class="course-card__badge badge--secondary">Non-Medical</span>
+            </div>
+            <h3 class="course-card__title">Beauty Entrepreneurship & Setup</h3>
+            <div class="course-card__meta">
+              <span class="course-card__meta-item"><i class="fa-regular fa-clock"></i> 2 Months</span>
+              <span class="course-card__meta-item"><i class="fa-solid fa-graduation-cap"></i> Open to All</span>
+            </div>
+            <p class="course-card__desc">
+              Aesthetic salon operations, government licensing, local marketing, clinic management software, and client protocols.
+            </p>
+            <div class="course-card__footer">
+              <div class="course-card__certificate">
+                <i class="fa-solid fa-certificate"></i> Diploma in Beauty Business Management
+              </div>
+              <a href="#contact" class="btn btn--primary course-card__cta magnetic-btn">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 11 — ACADEMY JOURNEY SECTION -->
+  <section class="methodology section-divider" style="background: var(--color-white);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: var(--space-16);">
+        <span class="section-label">Academy Journey</span>
+        <h2 class="section-title">The V-Treat Learning Framework</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">Our unique stepping-stone educational timeline ensures that every student graduates with clinical authority.</p>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: var(--space-16);">
+        
+        <!-- Step 1: LEARN -->
+        <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-12); align-items: center;" class="journey-row">
+          <div class="about__image-wrap" id="journey-img-1" style="aspect-ratio: 4/3;">
+            <div style="background: var(--color-plum); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+              <span class="text-gold" style="font-size: 3rem;"><i class="fa-solid fa-book-open"></i></span>
+            </div>
+            <div class="about__image-accent"></div>
+            <div class="journey__step-number" style="position: absolute; bottom: 15px; left: 15px; background: rgba(23,8,40,0.7); backdrop-filter: blur(10px); padding: 5px 15px; border-radius: var(--radius-sm); color: var(--color-gold); font-weight: bold; font-size: var(--text-lg); border: 1px solid rgba(201,162,76,0.3);">01</div>
+          </div>
+          <div>
+            <span class="section-label" style="margin-bottom: var(--space-2);">Phase 01 — Theoretical Foundation</span>
+            <h3 class="section-title" style="font-size: var(--text-3xl); margin-bottom: var(--space-4);">LEARN</h3>
+            <p style="color: var(--color-text-muted); font-size: var(--text-base); line-height: 1.7;">
+              Master the science of aesthetics through structured modules and live demonstrations beside practicing doctors. Dive deep into academic foundations: advanced medical cosmetology theories, patient facial anatomy, sterilization standards, and treatment parameters through customized lectures led personally by expert MBBS doctors.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 2: HEAL -->
+        <div style="display: grid; grid-template-columns: 0.9fr 1.1fr; gap: var(--space-12); align-items: center;" class="journey-row">
+          <div style="grid-column: 1; grid-row: 1;">
+            <span class="section-label" style="margin-bottom: var(--space-2);">Phase 02 — Practical Application</span>
+            <h3 class="section-title" style="font-size: var(--text-3xl); margin-bottom: var(--space-4); color: var(--color-gold);">HEAL</h3>
+            <p style="color: var(--color-text-muted); font-size: var(--text-base); line-height: 1.7;">
+              Step inside V-Treat Clinic. Treat live patients under Dr. Aishwarya's direct supervision. Build clinical confidence, muscle memory, and a portfolio of real results that certificates alone can never give you. Real skin, hair, and case studies under doctor supervision.
+            </p>
+          </div>
+          <div class="about__image-wrap" id="journey-img-2" style="aspect-ratio: 4/3; grid-column: 2; grid-row: 1;">
+            <div style="background: var(--color-plum); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+              <span class="text-gold" style="font-size: 3rem;"><i class="fa-solid fa-stethoscope"></i></span>
+            </div>
+            <div class="about__image-accent"></div>
+            <div class="journey__step-number" style="position: absolute; bottom: 15px; left: 15px; background: rgba(23,8,40,0.7); backdrop-filter: blur(10px); padding: 5px 15px; border-radius: var(--radius-sm); color: var(--color-gold); font-weight: bold; font-size: var(--text-lg); border: 1px solid rgba(201,162,76,0.3);">02</div>
+          </div>
+        </div>
+
+                <!-- Step 3: LEAD -->
+        <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-12); align-items: center;" class="journey-row">
+          <div class="about__image-wrap" id="journey-img-3" style="aspect-ratio: 4/3;">
+            <div style="background: var(--color-plum); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+              <span class="text-gold" style="font-size: 3rem;"><i class="fa-solid fa-graduation-cap"></i></span>
+            </div>
+            <div class="about__image-accent"></div>
+            <div class="journey__step-number" style="position: absolute; bottom: 15px; left: 15px; background: rgba(23,8,40,0.7); backdrop-filter: blur(10px); padding: 5px 15px; border-radius: var(--radius-sm); color: var(--color-gold); font-weight: bold; font-size: var(--text-lg); border: 1px solid rgba(201,162,76,0.3);">03</div>
+          </div>
+          <div>
+            <span class="section-label" style="margin-bottom: var(--space-2);">Phase 03 — Career Launch</span>
+            <h3 class="section-title" style="font-size: var(--text-3xl); margin-bottom: var(--space-4);">LEAD</h3>
+            <p style="color: var(--color-text-muted); font-size: var(--text-base); line-height: 1.7;">
+              Graduate certified and ready to lead. Receive your Skill TN approved certification, benefit from our active placement network, or launch your own independent clinical practice with our dedicated entrepreneurship setup mentorship (licensing, procurement, marketing).
+            </p>
+          </div>
+        </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 12 — ADMISSION PROCESS SECTION -->
+  <section class="section-divider" style="background: var(--color-cream); padding: var(--space-section) 0;">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: var(--space-12);">
+        <span class="section-label">Admissions Pathway</span>
+        <h2 class="section-title">How to Begin Your Journey</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">A structured, step-by-step illustrated process to secure your enrollment at the Academy.</p>
+      </div>
+
+      <div class="admission-grid-container" style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-12); align-items: center;">
+        <div class="about__image-wrap" id="admission-img" style="aspect-ratio: 4/3;">
+          <div style="background: var(--color-plum); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+            <span class="text-gold" style="font-size: 3rem;"><i class="fa-solid fa-graduation-cap"></i></span>
+          </div>
+          <div class="about__image-accent"></div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: var(--space-6);">
+          <div style="display: flex; gap: 20px; align-items: flex-start;">
+            <div style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--color-border-gold); background: var(--color-white); color: var(--color-primary); font-family: var(--font-heading); font-size: var(--text-base); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 600; box-shadow: var(--shadow-sm);">01</div>
+            <div>
+              <h4 style="font-size: var(--text-base); font-weight: 600; color: var(--color-plum); margin-bottom: 5px;">Submit Enquiry</h4>
+              <p style="font-size: var(--text-sm); color: var(--color-text-muted);">Fill out our contact form or send us a WhatsApp enquiry message.</p>
+            </div>
+          </div>
+          <div style="display: flex; gap: 20px; align-items: flex-start;">
+            <div style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--color-border-gold); background: var(--color-white); color: var(--color-primary); font-family: var(--font-heading); font-size: var(--text-base); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 600; box-shadow: var(--shadow-sm);">02</div>
+            <div>
+              <h4 style="font-size: var(--text-base); font-weight: 600; color: var(--color-plum); margin-bottom: 5px;">Free Counselling Call</h4>
+              <p style="font-size: var(--text-sm); color: var(--color-text-muted);">Our experts will guide you to select the best track based on your background.</p>
+            </div>
+          </div>
+          <div style="display: flex; gap: 20px; align-items: flex-start;">
+            <div style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--color-border-gold); background: var(--color-white); color: var(--color-primary); font-family: var(--font-heading); font-size: var(--text-base); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 600; box-shadow: var(--shadow-sm);">03</div>
+            <div>
+              <h4 style="font-size: var(--text-base); font-weight: 600; color: var(--color-plum); margin-bottom: 5px;">Free Demo Class</h4>
+              <p style="font-size: var(--text-sm); color: var(--color-text-muted);">Attend a live demonstration class to experience our teaching philosophy.</p>
+            </div>
+          </div>
+          <div style="display: flex; gap: 20px; align-items: flex-start;">
+            <div style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--color-border-gold); background: var(--color-white); color: var(--color-primary); font-family: var(--font-heading); font-size: var(--text-base); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 600; box-shadow: var(--shadow-sm);">04</div>
+            <div>
+              <h4 style="font-size: var(--text-base); font-weight: 600; color: var(--color-plum); margin-bottom: 5px;">Confirm Your Seat</h4>
+              <p style="font-size: var(--text-sm); color: var(--color-text-muted);">Pay the enrollment fee to secure your seat. Limited to 12 seats per batch.</p>
+            </div>
+          </div>
+          <div style="display: flex; gap: 20px; align-items: flex-start;">
+            <div style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--color-border-gold); background: var(--color-white); color: var(--color-primary); font-family: var(--font-heading); font-size: var(--text-base); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 600; box-shadow: var(--shadow-sm);">05</div>
+            <div>
+              <h4 style="font-size: var(--text-base); font-weight: 600; color: var(--color-plum); margin-bottom: 5px;">Begin Your Journey</h4>
+              <p style="font-size: var(--text-sm); color: var(--color-text-muted);">Join our live clinic classes and start building your cosmetology career.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- SECTION 13 — FOUNDER SECTION -->
+  <section class="founder" style="background: var(--color-white);">
+    <div class="container">
+      <div class="founder__grid">
+        <div class="founder__image-wrap" style="position: relative; overflow: visible;">
+          <div style="position: relative; border-radius: var(--radius-xl); overflow: hidden; aspect-ratio: 3/4; border: 1px solid var(--color-border-gold);" id="founder-main-container">
+            <!-- Image 4 loaded dynamically -->
+            <div style="background: var(--color-plum); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+              <span class="text-gold" style="font-size: 3rem;"><i class="fa-solid fa-user-doctor"></i></span>
+            </div>
+          </div>
+          <div style="position: absolute; bottom: -20px; right: -20px; width: 180px; aspect-ratio: 4/3; border-radius: var(--radius-lg); overflow: hidden; border: 3px solid var(--color-white); box-shadow: var(--shadow-xl);" id="founder-secondary-container">
+            <!-- Image 2 loaded dynamically -->
+            <div style="background: var(--color-plum-light); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+              <span class="text-gold" style="font-size: 1.5rem;"><i class="fa-solid fa-graduation-cap"></i></span>
+            </div>
+          </div>
+        </div>
+        <div class="founder__info">
+          <span class="section-label">Medical Leadership</span>
+          <h2 class="founder__name">Dr. Aishwarya Selvam</h2>
+          <div class="founder__title" style="color: var(--color-gold); font-weight: 600; margin-bottom: var(--space-4);">
+            MBBS, Aesthetic Medicine Specialist, Academy Director and CEO
+          </div>
+          <p style="color: var(--color-text-muted); margin-bottom: var(--space-6);">
+            Dr. Aishwarya Selvam leads V-Treat Clinic & Academy with a commitment to medical authority and luxury aesthetic standards. She believes in hands-on clinical training, ensuring every student practices on real patients under clinical supervision.
+          </p>
+          
+          <!-- Pull Quote -->
+          <blockquote class="founder__quote" style="font-family: var(--font-heading); font-size: var(--text-lg); font-style: italic; border-left: 2px solid var(--color-gold); padding-left: var(--space-4); margin-bottom: var(--space-6); color: var(--color-plum);">
+            "Every student who graduates from V-Treat carries not just a certificate they carry the confidence that comes from treating real patients under real clinical supervision."
+          </blockquote>
+
+          <!-- Credentials -->
+          <div class="founder__credentials">
+            <span class="founder__credential">MBBS Doctor</span>
+            <span class="founder__credential">Aesthetic Medicine</span>
+            <span class="founder__credential">Laser Specialist</span>
+            <span class="founder__credential">PMU Expert</span>
+            <span class="founder__credential">500+ Students Trained</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 14 — CLINIC COMMITMENT PROCESS SECTION -->
+  <section class="consultation section-divider" style="background: var(--color-plum); color: var(--color-white);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: var(--space-16);">
+        <span class="section-label" style="color: var(--color-gold-accent);">Clinic Commitment</span>
+        <h2 class="section-title" style="color: var(--color-white); font-weight: 300;">Our Patient Care Commitment</h2>
+        <p class="section-subtitle" style="color: rgba(255,255,255,0.6); margin: 0 auto;">We follow a strict, multi-step medical journey for every patient to deliver the safest and most natural results.</p>
+      </div>
+
+      <div class="consultation__steps">
+        
+        <!-- Step 1 -->
+        <div class="consultation__step">
+          <div class="consultation__step-num">01</div>
+          <h3 class="consultation__step-title">Consultation and Assessment</h3>
+          <p class="consultation__step-desc" style="color: rgba(255,255,255,0.7);">
+            Every patient undergoes a detailed facial and skin analysis. Our expert MBBS doctors examine concern areas, history, and goals to design a customized plan.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="consultation__step">
+          <div class="consultation__step-num">02</div>
+          <h3 class="consultation__step-title">Personalized Treatment</h3>
+          <p class="consultation__step-desc" style="color: rgba(255,255,255,0.7);">
+            Treatments are executed inside our sterile, modern clinic. We employ advanced FDA-approved equipment under doctor supervision for optimal patient comfort.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="consultation__step">
+          <div class="consultation__step-num">03</div>
+          <h3 class="consultation__step-title">Aftercare and Follow-Up</h3>
+          <p class="consultation__step-desc" style="color: rgba(255,255,255,0.7);">
+            Post-treatment, patients receive detailed aftercare products and instructions. We schedule systematic follow-ups to ensure long-lasting, pleasing results.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Prominent Call Link -->
+      <div style="text-align: center; margin-top: var(--space-12);">
+        <p style="font-size: var(--text-sm); color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: var(--space-2);">Direct Booking Line</p>
+        <a href="tel:+917904280255" class="text-gold" style="font-family: var(--font-heading); font-size: var(--text-3xl); font-weight: 300;">+91 79042 80255</a>
+      </div>
+    </div>
+  </section>
+
+        <!-- SECTION 15 — STUDENT SUCCESS STORIES (TESTIMONIALS) -->
+  <section class="success-stories" id="results">
+    <div class="container container--wide">
+      <div class="success-stories__header">
+        <span class="section-label">Success Stories</span>
+        <h2 class="section-title">The Standard of Excellence</h2>
+        <p class="section-subtitle" style="margin: 0 auto; max-width: 600px;">Discover the transformation journeys of our elite graduates who are now leading clinical practices and luxury studios across the nation.</p>
+      </div>
+
+      <div class="editorial-stories">
+        
+        <!-- Story 1: Identity -> Background -> Journey -> Transformation -> Outcome -> Achievement -> CTA -->
+        <div class="editorial-story">
+          <div class="editorial-story__media" id="success-img-1">
+            <div class="editorial-story__media-overlay"></div>
+          </div>
+          <div class="editorial-story__content">
+            <div class="story-arch">
+              <!-- 1. Identity & Background -->
+              <div class="story-arch__identity">
+                <div class="trust-signals" style="margin-bottom: var(--space-4);">
+                  <span class="trust-badge trust-badge--verified"><i class="fa-solid fa-certificate"></i> Verified Graduate</span>
+                  <span class="trust-badge trust-badge--stars"><i class="fa-solid fa-star"></i> 5.0</span>
+                </div>
+                <h3 class="story-arch__name">Dr. Kokila Dani V</h3>
+                <span class="story-arch__qual"><i class="fa-solid fa-graduation-cap"></i> BDS Graduate &bull; Diploma in Clinical Cosmetology</span>
+              </div>
+
+              <!-- 2. Training Journey -->
+              <div class="story-arch__phases">
+                <div class="phase">
+                  <span class="phase__label">Before V-Treat</span>
+                  <p class="phase__text">Standard BDS practice with zero aesthetic exposure or specialized clinical skills.</p>
+                </div>
+                <div class="phase phase--primary">
+                  <span class="phase__label">Training Journey</span>
+                  <p class="phase__text">Intensive live-patient training under Dr. Aishwarya in advanced skin and laser procedures.</p>
+                </div>
+              </div>
+
+              <!-- 3. Transformation -->
+              <p class="story-arch__transformation">
+                "The hands-on supervision completely shifted my career trajectory. I gained the precise clinical confidence needed to handle complex aesthetic procedures."
+              </p>
+
+              <!-- 4. Career Outcome & Achievement -->
+              <div class="story-arch__outcome-panel">
+                <div class="outcome-block">
+                  <span class="outcome-block__label">Career Outcome</span>
+                  <span class="outcome-block__value"><i class="fa-solid fa-briefcase"></i> Clinic Founder</span>
+                </div>
+                <div class="outcome-block">
+                  <span class="outcome-block__label">Location</span>
+                  <span class="outcome-block__value"><i class="fa-solid fa-location-dot"></i> Chennai, TN</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story 2: Identity -> Background -> Journey -> Transformation -> Outcome -> Achievement -> CTA -->
+        <div class="editorial-story editorial-story--reverse">
+          <div class="editorial-story__content">
+            <div class="story-arch">
+              <!-- 1. Identity & Background -->
+              <div class="story-arch__identity">
+                <div class="trust-signals" style="margin-bottom: var(--space-4);">
+                  <span class="trust-badge trust-badge--verified"><i class="fa-solid fa-certificate"></i> Verified Graduate</span>
+                  <span class="trust-badge trust-badge--stars"><i class="fa-solid fa-star"></i> 5.0</span>
+                </div>
+                <h3 class="story-arch__name">Dr. Prathiksha V</h3>
+                <span class="story-arch__qual"><i class="fa-solid fa-graduation-cap"></i> BDS Graduate &bull; Diploma in Clinical Cosmetology</span>
+              </div>
+
+              <!-- 2. Training Journey -->
+              <div class="story-arch__phases">
+                <div class="phase">
+                  <span class="phase__label">Before V-Treat</span>
+                  <p class="phase__text">No prior experience in the beauty, permanent makeup, or aesthetic industry.</p>
+                </div>
+                <div class="phase phase--primary">
+                  <span class="phase__label">Training Journey</span>
+                  <p class="phase__text">Mastered advanced microblading and lip blush through direct mentor supervision.</p>
+                </div>
+              </div>
+
+              <!-- 3. Transformation -->
+              <p class="story-arch__transformation">
+                "Starting with absolute zero experience, the direct hands-on training on real clients empowered me to build a flawless PMU portfolio instantly."
+              </p>
+
+              <!-- 4. Career Outcome & Achievement -->
+              <div class="story-arch__outcome-panel">
+                <div class="outcome-block">
+                  <span class="outcome-block__label">Career Outcome</span>
+                  <span class="outcome-block__value"><i class="fa-solid fa-crown"></i> Studio Founder</span>
+                </div>
+                <div class="outcome-block">
+                  <span class="outcome-block__label">Location</span>
+                  <span class="outcome-block__value"><i class="fa-solid fa-location-dot"></i> Madurai, TN</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="editorial-story__media" id="success-img-2">
+            <div class="editorial-story__media-overlay"></div>
+          </div>
+        </div>
+
+        <!-- Story 3: Identity -> Background -> Journey -> Transformation -> Outcome -> Achievement -> CTA -->
+        <div class="editorial-story">
+          <div class="editorial-story__media" id="success-img-3">
+            <div class="editorial-story__media-overlay"></div>
+          </div>
+          <div class="editorial-story__content">
+            <div class="story-arch">
+              <!-- 1. Identity & Background -->
+              <div class="story-arch__identity">
+                <div class="trust-signals" style="margin-bottom: var(--space-4);">
+                  <span class="trust-badge trust-badge--verified"><i class="fa-solid fa-certificate"></i> Verified Graduate</span>
+                  <span class="trust-badge trust-badge--stars"><i class="fa-solid fa-star"></i> 5.0</span>
+                </div>
+                <h3 class="story-arch__name">Mrs. Keerthana A</h3>
+                <span class="story-arch__qual"><i class="fa-solid fa-graduation-cap"></i> Nursing Graduate &bull; Diploma in Clinical Cosmetology</span>
+              </div>
+
+              <!-- 2. Training Journey -->
+              <div class="story-arch__phases">
+                <div class="phase">
+                  <span class="phase__label">Before V-Treat</span>
+                  <p class="phase__text">Standard nursing background seeking specialization and rapid career growth.</p>
+                </div>
+                <div class="phase phase--primary">
+                  <span class="phase__label">Training Journey</span>
+                  <p class="phase__text">Acquired highly sought-after, industry-ready clinical skills and protocols.</p>
+                </div>
+              </div>
+
+              <!-- 3. Transformation -->
+              <p class="story-arch__transformation">
+                "The academy's professional reputation and my new skill set allowed the placement team to secure a high-paying clinical position for me immediately."
+              </p>
+
+              <!-- 4. Career Outcome & Achievement -->
+              <div class="story-arch__outcome-panel">
+                <div class="outcome-block">
+                  <span class="outcome-block__label">Career Outcome</span>
+                  <span class="outcome-block__value"><i class="fa-solid fa-user-doctor"></i> Senior Cosmetologist</span>
+                </div>
+                <div class="outcome-block">
+                  <span class="outcome-block__label">Placement Time</span>
+                  <span class="outcome-block__value"><i class="fa-solid fa-clock"></i> Under 1 Month</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Conversion Bridge Banner -->
+      <div class="conversion-bridge">
+        <div class="conversion-bridge__content">
+          <span class="conversion-bridge__badge">Join the Elite Alumni Network</span>
+          <h3 class="conversion-bridge__title">Ready to write your own success story?</h3>
+          <p class="conversion-bridge__desc">Step into the future of aesthetic medicine. Join over 500+ professionals who have transformed their careers with V-Treat's international standard clinical training.</p>
+        </div>
+        <div class="conversion-bridge__actions">
+          <a href="#courses" class="btn btn--outline magnetic-btn" style="color: var(--color-white); border-color: rgba(255,255,255,0.3); font-size: 1.1rem; padding: 1.2rem 2.5rem;">Explore Curriculum</a>
+          <a href="#contact" class="btn btn--primary magnetic-btn" style="background: var(--color-white); color: var(--color-plum); font-size: 1.1rem; padding: 1.2rem 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">Apply Now <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 16 — CAREER OUTCOMES SECTION -->
+  <section class="section-divider" style="background: var(--color-cream); padding: var(--space-section) 0;">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: var(--space-16);">
+        <span class="section-label">Career Progression</span>
+        <h2 class="section-title">Your Path to Professional Success</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">We don't just teach — we construct pathways for long-term income and independent clinical practice.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-8); margin-bottom: var(--space-12);">
+        <!-- Path 1 -->
+        <div class="why-card" style="background: var(--color-white); padding: var(--space-8);">
+          <div style="color: var(--color-primary); font-size: 2rem; margin-bottom: var(--space-4);"><i class="fa-solid fa-briefcase"></i></div>
+          <h3 style="font-size: var(--text-lg); font-weight: 600; margin-bottom: var(--space-3);">Get Placed</h3>
+          <p style="color: var(--color-text-muted); font-size: var(--text-sm);">
+            Avail of our active placement portal. Graduates are placed in aesthetic skin clinics, luxury spas, and cosmetic hospitals across major tier-1 cities in India.
+          </p>
+        </div>
+        
+        <!-- Path 2 -->
+        <div class="why-card" style="background: var(--color-white); padding: var(--space-8);">
+          <div style="color: var(--color-primary); font-size: 2rem; margin-bottom: var(--space-4);"><i class="fa-solid fa-store"></i></div>
+          <h3 style="font-size: var(--text-lg); font-weight: 600; margin-bottom: var(--space-3);">Start Your Own Practice</h3>
+          <p style="color: var(--color-text-muted); font-size: var(--text-sm);">
+            Benefit from our dedicated Business Setup Mentorship. We guide you through machine procurement, licensing protocols, service menu layout, and local client acquisition.
+          </p>
+        </div>
+
+        <!-- Path 3 -->
+        <div class="why-card" style="background: var(--color-white); padding: var(--space-8);">
+          <div style="color: var(--color-primary); font-size: 2rem; margin-bottom: var(--space-4);"><i class="fa-solid fa-user-doctor"></i></div>
+          <h3 style="font-size: var(--text-lg); font-weight: 600; margin-bottom: var(--space-3);">Advance Your Medical Career</h3>
+          <p style="color: var(--color-text-muted); font-size: var(--text-sm);">
+            For medical graduates (MBBS, BDS, AYUSH), adding aesthetic certifications helps scale your existing practice, providing premium high-margin cash services to patients.
+          </p>
+        </div>
+      </div>
+
+      <!-- Animated Number Strip -->
+      <div style="background: var(--color-plum); padding: var(--space-8); border-radius: var(--radius-xl); display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); text-align: center; border: 1px solid rgba(255,255,255,0.08);">
+        <div>
+          <div style="font-family: var(--font-heading); font-size: var(--text-2xl); color: var(--color-gold-accent);">95%</div>
+          <div style="font-size: var(--text-xs); color: rgba(255,255,255,0.5); text-transform: uppercase;">Placed within 6 Months</div>
+        </div>
+        <div>
+          <div style="font-family: var(--font-heading); font-size: var(--text-2xl); color: var(--color-gold-accent);">12+</div>
+          <div style="font-size: var(--text-xs); color: rgba(255,255,255,0.5); text-transform: uppercase;">Clinic Partners</div>
+        </div>
+        <div>
+          <div style="font-family: var(--font-heading); font-size: var(--text-2xl); color: var(--color-gold-accent);">3 Months</div>
+          <div style="font-size: var(--text-xs); color: rgba(255,255,255,0.5); text-transform: uppercase;">To First Client</div>
+        </div>
+        <div>
+          <div style="font-family: var(--font-heading); font-size: var(--text-2xl); color: var(--color-gold-accent);">500+</div>
+          <div style="font-size: var(--text-xs); color: rgba(255,255,255,0.5); text-transform: uppercase;">Successful Alumni</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 17 — DUAL ECOSYSTEM SECTION -->
+  <section class="section-divider" style="background: var(--color-white); padding: var(--space-section) 0;">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: var(--space-16);">
+        <span class="section-label">Double Foundation</span>
+        <h2 class="section-title">Two Ecosystems. One Brand.</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">V-Treat functions seamlessly as both a leading clinical medical center and a premium vocational academy.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-10);">
+        <!-- Academy Card -->
+        <div style="background: var(--color-cream); padding: var(--space-8); border-radius: var(--radius-xl); border: 1px solid var(--color-border-gold); position: relative; overflow: hidden;">
+          <div style="position: absolute; top: -20px; right: -20px; font-size: 8rem; color: rgba(61,18,107,0.03);"><i class="fa-solid fa-graduation-cap"></i></div>
+          <h3 style="font-size: var(--text-2xl); color: var(--color-primary); margin-bottom: var(--space-4);">V-Treat Academy</h3>
+          <p style="color: var(--color-text-muted); margin-bottom: var(--space-6);">Professional Cosmetology Training Institute offering verified courses on real clinical setups.</p>
+          <ul style="display: flex; flex-direction: column; gap: var(--space-3); font-size: var(--text-sm);">
+            <li><i class="fa-solid fa-graduation-cap text-gold" style="margin-right: 10px;"></i> Professional Cosmetology Training Institute</li>
+            <li><i class="fa-solid fa-check text-gold" style="margin-right: 10px;"></i> Medical and Non-Medical Tracks</li>
+            <li><i class="fa-solid fa-users text-gold" style="margin-right: 10px;"></i> Live Patient Exposure</li>
+            <li><i class="fa-solid fa-award text-gold" style="margin-right: 10px;"></i> Certified Career Placement Support</li>
+            <li><i class="fa-solid fa-briefcase text-gold" style="margin-right: 10px;"></i> Business Startup Mentorship</li>
+          </ul>
+        </div>
+
+        <!-- Clinic Card -->
+        <div style="background: var(--color-cream); padding: var(--space-8); border-radius: var(--radius-xl); border: 1px solid var(--color-border-gold); position: relative; overflow: hidden;">
+          <div style="position: absolute; top: -20px; right: -20px; font-size: 8rem; color: rgba(61,18,107,0.03);"><i class="fa-solid fa-hospital"></i></div>
+          <h3 style="font-size: var(--text-2xl); color: var(--color-primary); margin-bottom: var(--space-4);">V-Treat Clinic</h3>
+          <p style="color: var(--color-text-muted); margin-bottom: var(--space-6);">Advanced Aesthetic Medical Centre delivering doctor-supervised clinical services.</p>
+          <ul style="display: flex; flex-direction: column; gap: var(--space-3); font-size: var(--text-sm);">
+            <li><i class="fa-solid fa-user-doctor text-gold" style="margin-right: 10px;"></i> Advanced Aesthetic Medical Centre</li>
+            <li><i class="fa-solid fa-check text-gold" style="margin-right: 10px;"></i> Skin and Hair Medical Treatments</li>
+            <li><i class="fa-solid fa-bolt text-gold" style="margin-right: 10px;"></i> Laser and Light Procedures</li>
+            <li><i class="fa-solid fa-wand-magic-sparkles text-gold" style="margin-right: 10px;"></i> PMU and Cosmetic Services</li>
+            <li><i class="fa-solid fa-tooth text-gold" style="margin-right: 10px;"></i> Full Family Dental Care</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 17.5 — THE SIGNATURE EXPERIENCE: INTEGRATED CAREER PATHWAY -->
+  <section class="sig-journey" id="signature-journey">
+    <div class="ambient-light-ray" style="top: 10%; left: 5%;"></div>
+    <div class="ambient-light-ray" style="bottom: 10%; right: 5%;"></div>
+    
+    <div class="container sig-journey-inner">
+      <div style="text-align: center; margin-bottom: var(--space-10);">
+        <span class="section-label" style="color: var(--color-gold-accent);">The Signature Journey</span>
+        <h2 class="section-title" style="color: var(--color-white); font-weight: 300;">7 Stages of Cosmetology Mastery</h2>
+        <p class="section-subtitle" style="color: rgba(255,255,255,0.6); margin: 0 auto;">Trace your transformation path from student discovery to medical authority and career launch.</p>
+      </div>
+
+      <!-- Interactive Timeline Progress Bar -->
+      <div class="sig-timeline">
+        <div class="sig-timeline-progress" id="sig-progress"></div>
+        <div class="sig-timeline-step active" data-step="0">
+          <div class="sig-step-dot">1</div>
+          <span class="sig-step-label">Discover</span>
+        </div>
+        <div class="sig-timeline-step" data-step="1">
+          <div class="sig-step-dot">2</div>
+          <span class="sig-step-label">Trust</span>
+        </div>
+        <div class="sig-timeline-step" data-step="2">
+          <div class="sig-step-dot">3</div>
+          <span class="sig-step-label">Transformation</span>
+        </div>
+        <div class="sig-timeline-step" data-step="3">
+          <div class="sig-step-dot">4</div>
+          <span class="sig-step-label">Certification</span>
+        </div>
+        <div class="sig-timeline-step" data-step="4">
+          <div class="sig-step-dot">5</div>
+          <span class="sig-step-label">Placement</span>
+        </div>
+        <div class="sig-timeline-step" data-step="5">
+          <div class="sig-step-dot">6</div>
+          <span class="sig-step-label">Launch</span>
+        </div>
+        <div class="sig-timeline-step" data-step="6">
+          <div class="sig-step-dot">7</div>
+          <span class="sig-step-label">Success</span>
+        </div>
+      </div>
+
+      <!-- Central Storytelling Board -->
+      <div class="sig-card tilt-card" id="sig-card">
+        <div class="sig-card-content tilt-card-inner">
+          <span class="sig-card-phase" id="sig-phase">Phase 01 — Career Exploration</span>
+          <h3 class="sig-card-title" id="sig-title">Discover Clinic & Academy Menu</h3>
+          <p class="sig-card-desc" id="sig-desc">
+            Explore advanced cosmetic dermatology, clinical cosmetology, and PMU pathways. Discover the V-Treat dual ecosystem combining doctor-supervised treatments with high-end vocational courses designed to elevate your future.
+          </p>
+          
+          <div class="sig-card-metric" id="sig-metric">
+            <div class="sig-metric-item">
+              <span class="sig-metric-val" id="sig-metric-1-val">50+</span>
+              <span class="sig-metric-lbl" id="sig-metric-1-lbl">Aesthetic Services</span>
+            </div>
+            <div class="sig-metric-item">
+              <span class="sig-metric-val" id="sig-metric-2-val">12+</span>
+              <span class="sig-metric-lbl" id="sig-metric-2-lbl">Curriculums</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="sig-card-visual" id="sig-visual">
+          <!-- Image will be injected dynamically via JS from real_photos keys -->
+          <div style="background: var(--color-plum-light); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;" id="sig-img-fallback">
+            <span class="text-gold" style="font-size: 3rem;"><i class="fa-solid fa-compass"></i></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <div class="luxury-separator"></div>
+
+  <!-- SECTION 18 — CLINIC TREATMENTS TABBED PANEL (50+ TREATMENTS LISTED) -->
+  <section id="treatments" class="treatments-tabs-section section-divider" style="background: var(--color-cream-dark); padding: var(--space-section) 0;">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: var(--space-12);">
+        <span class="section-label">Clinic Services</span>
+        <h2 class="section-title">Our Full Treatment Menu</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">Browse all 50+ aesthetic, dental, and wellness treatments available at V-Treat Clinic.</p>
+      </div>
+
+      <!-- Tabs navigation -->
+      <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: var(--space-12);" class="treatment-tabs">
+        <button class="btn btn--outline treatment-tab-btn active magnetic-btn" data-tab="skin" style="padding: var(--space-2) var(--space-4); font-size: var(--text-xs);">Skin (19)</button>
+        <button class="btn btn--outline treatment-tab-btn magnetic-btn" data-tab="hair" style="padding: var(--space-2) var(--space-4); font-size: var(--text-xs);">Hair (8)</button>
+        <button class="btn btn--outline treatment-tab-btn magnetic-btn" data-tab="laser" style="padding: var(--space-2) var(--space-4); font-size: var(--text-xs);">Laser (6)</button>
+        <button class="btn btn--outline treatment-tab-btn magnetic-btn" data-tab="pmu" style="padding: var(--space-2) var(--space-4); font-size: var(--text-xs);">PMU (8)</button>
+        <button class="btn btn--outline treatment-tab-btn magnetic-btn" data-tab="dental" style="padding: var(--space-2) var(--space-4); font-size: var(--text-xs);">Dental (9)</button>
+        <button class="btn btn--outline treatment-tab-btn magnetic-btn" data-tab="wellness" style="padding: var(--space-2) var(--space-4); font-size: var(--text-xs);">Wellness (4)</button>
+      </div>
+
+      <!-- Tabs content panel -->
+      <div class="treatment-panels">
+        
+        <!-- Skin Panel -->
+        <div class="treatment-panel active" id="panel-skin">
+          <div class="treatment-panel__row" style="grid-template-columns: 1fr 1.2fr; gap: var(--space-8);">
+            <div class="treatment-panel__menu">
+              <h3 style="font-family: var(--font-heading); color: var(--color-plum); font-size: 1.5rem; margin-bottom: var(--space-4);">Core Skin Solutions</h3>
+              <div class="luxury-menu-list">
+                <div class="luxury-menu-item">HydraFacial & Advanced Cleansing</div>
+                <div class="luxury-menu-item">Chemical Peels & Skin Resurfacing</div>
+                <div class="luxury-menu-item">Microneedling (MNRF) & PRP Therapy</div>
+                <div class="luxury-menu-item">Botox Injections & Dermal Fillers</div>
+                <div class="luxury-menu-item">Carboxytherapy</div>
+                <div class="luxury-menu-item">LED Light Therapy & Medi Facials</div>
+                <div class="luxury-menu-item">Radio Frequency (RF) Skin Firming</div>
+                <div class="luxury-menu-item">Mesotherapy Infusion</div>
+              </div>
+              <div class="menu-trust-indicator">
+                <i class="fa-solid fa-shield-halved text-gold"></i> Administered by board-certified dermatologists.
+              </div>
+            </div>
+
+            <div class="treatment-panel__featured luxury-featured-outcome">
+              <div id="menu-treatment-img-skin" class="luxury-featured-img"></div>
+              <div class="luxury-narrative-overlay">
+                <div class="luxury-narrative-content">
+                  <span class="luxury-narrative-label">Featured Outcome</span>
+                  <h4 class="luxury-narrative-title">Severe Acne & Pigmentation Clearance</h4>
+                  <div class="luxury-narrative-details">
+                    <p><strong>Primary Concern:</strong> Grade 4 Cystic Acne & Scarring</p>
+                    <p><strong>Transformation:</strong> 90% reduction in active lesions and restored smooth skin texture within 12 weeks.</p>
+                  </div>
+                  <a href="#contact" class="btn btn--primary btn--sm magnetic-btn" style="margin-top: var(--space-4);">Book a Consultation</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hair Panel -->
+        <div class="treatment-panel" id="panel-hair" style="display: none;">
+          <div class="treatment-panel__row" style="grid-template-columns: 1fr 1.2fr; gap: var(--space-8);">
+            <div class="treatment-panel__menu">
+              <h3 style="font-family: var(--font-heading); color: var(--color-plum); font-size: 1.5rem; margin-bottom: var(--space-4);">Advanced Hair Restoration</h3>
+              <div class="luxury-menu-list">
+                <div class="luxury-menu-item">FUE Hair Transplant Surgery</div>
+                <div class="luxury-menu-item">PRP (Platelet-Rich Plasma) Therapy</div>
+                <div class="luxury-menu-item">GFC (Growth Factor Concentrate)</div>
+                <div class="luxury-menu-item">Scalp Micropigmentation (SMP)</div>
+                <div class="luxury-menu-item">Laser Hair Regrowth Therapy</div>
+                <div class="luxury-menu-item">Anti-Dandruff & Scalp Detox</div>
+                <div class="luxury-menu-item">Alopecia Treatment Protocols</div>
+              </div>
+              <div class="menu-trust-indicator">
+                <i class="fa-solid fa-shield-halved text-gold"></i> State-of-the-art transplant facilities.
+              </div>
+            </div>
+
+            <div class="treatment-panel__featured luxury-featured-outcome">
+              <div id="menu-treatment-img-hair" class="luxury-featured-img"></div>
+              <div class="luxury-narrative-overlay">
+                <div class="luxury-narrative-content">
+                  <span class="luxury-narrative-label">Featured Outcome</span>
+                  <h4 class="luxury-narrative-title">Vertex Hair Density Restoration</h4>
+                  <div class="luxury-narrative-details">
+                    <p><strong>Primary Concern:</strong> Grade 5 Pattern Baldness</p>
+                    <p><strong>Transformation:</strong> High-density FUE implantation resulting in full crown coverage and natural hairline.</p>
+                  </div>
+                  <a href="#contact" class="btn btn--primary btn--sm magnetic-btn" style="margin-top: var(--space-4);">Book a Consultation</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Laser Panel -->
+        <div class="treatment-panel" id="panel-laser" style="display: none;">
+          <div class="treatment-panel__row" style="grid-template-columns: 1fr 1.2fr; gap: var(--space-8);">
+            <div class="treatment-panel__menu">
+              <h3 style="font-family: var(--font-heading); color: var(--color-plum); font-size: 1.5rem; margin-bottom: var(--space-4);">Clinical Laser Procedures</h3>
+              <div class="luxury-menu-list">
+                <div class="luxury-menu-item">Diode Laser Hair Reduction</div>
+                <div class="luxury-menu-item">Q-Switch ND:YAG Pigmentation Laser</div>
+                <div class="luxury-menu-item">CO2 Fractional Laser Resurfacing</div>
+                <div class="luxury-menu-item">Laser Tattoo Removal</div>
+                <div class="luxury-menu-item">Pico Laser Toning</div>
+                <div class="luxury-menu-item">Vascular Lesion Laser Therapy</div>
+              </div>
+              <div class="menu-trust-indicator">
+                <i class="fa-solid fa-shield-halved text-gold"></i> Utilizing FDA-approved multi-wavelength lasers.
+              </div>
+            </div>
+
+            <div class="treatment-panel__featured luxury-featured-outcome">
+              <div id="menu-treatment-img-laser" class="luxury-featured-img"></div>
+              <div class="luxury-narrative-overlay">
+                <div class="luxury-narrative-content">
+                  <span class="luxury-narrative-label">Featured Outcome</span>
+                  <h4 class="luxury-narrative-title">Hyperpigmentation Reversal</h4>
+                  <div class="luxury-narrative-details">
+                    <p><strong>Primary Concern:</strong> Deep Epidermal Melasma</p>
+                    <p><strong>Transformation:</strong> Flawless tone restoration using advanced Q-Switch Laser Toning protocols.</p>
+                  </div>
+                  <a href="#contact" class="btn btn--primary btn--sm magnetic-btn" style="margin-top: var(--space-4);">Book a Consultation</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PMU Panel -->
+        <div class="treatment-panel" id="panel-pmu" style="display: none;">
+          <div class="treatment-panel__row" style="grid-template-columns: 1fr 1.2fr; gap: var(--space-8);">
+            <div class="treatment-panel__menu">
+              <h3 style="font-family: var(--font-heading); color: var(--color-plum); font-size: 1.5rem; margin-bottom: var(--space-4);">Permanent Makeup (PMU)</h3>
+              <div class="luxury-menu-list">
+                <div class="luxury-menu-item">Eyebrow Microblading & Shading</div>
+                <div class="luxury-menu-item">Lip Blushing & Neutralization</div>
+                <div class="luxury-menu-item">Permanent Eyeliner</div>
+                <div class="luxury-menu-item">Scalp Micropigmentation (SMP)</div>
+                <div class="luxury-menu-item">BB Glow Treatment</div>
+                <div class="luxury-menu-item">Vitiligo Camouflage</div>
+              </div>
+              <div class="menu-trust-indicator">
+                <i class="fa-solid fa-shield-halved text-gold"></i> Precision artistry using organic pigments.
+              </div>
+            </div>
+
+            <div class="treatment-panel__featured luxury-featured-outcome">
+              <div id="menu-treatment-img-pmu" class="luxury-featured-img"></div>
+              <div class="luxury-narrative-overlay">
+                <div class="luxury-narrative-content">
+                  <span class="luxury-narrative-label">Featured Outcome</span>
+                  <h4 class="luxury-narrative-title">Precision Eyebrow Microblading</h4>
+                  <div class="luxury-narrative-details">
+                    <p><strong>Primary Concern:</strong> Sparse, asymmetrical brows</p>
+                    <p><strong>Transformation:</strong> Natural hair-stroke simulation creating perfectly arched, voluminous eyebrows.</p>
+                  </div>
+                  <a href="#contact" class="btn btn--primary btn--sm magnetic-btn" style="margin-top: var(--space-4);">Book a Consultation</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dental Panel -->
+        <div class="treatment-panel" id="panel-dental" style="display: none;">
+          <div class="treatment-panel__row" style="grid-template-columns: 1fr 1.2fr; gap: var(--space-8);">
+            <div class="treatment-panel__menu">
+              <h3 style="font-family: var(--font-heading); color: var(--color-plum); font-size: 1.5rem; margin-bottom: var(--space-4);">Aesthetic & Clinical Dental</h3>
+              <div class="luxury-menu-list">
+                <div class="luxury-menu-item">Smile Designing (Veneers/Laminates)</div>
+                <div class="luxury-menu-item">Teeth Whitening & Bleaching</div>
+                <div class="luxury-menu-item">Dental Implants</div>
+                <div class="luxury-menu-item">Invisalign & Clear Aligners</div>
+                <div class="luxury-menu-item">Root Canal Treatment (RCT)</div>
+                <div class="luxury-menu-item">Cosmetic Gum Contouring</div>
+              </div>
+              <div class="menu-trust-indicator">
+                <i class="fa-solid fa-shield-halved text-gold"></i> Digital dentistry and pain-free protocols.
+              </div>
+            </div>
+
+            <div class="treatment-panel__featured luxury-featured-outcome">
+              <div id="menu-treatment-img-dental" class="luxury-featured-img"></div>
+              <div class="luxury-narrative-overlay">
+                <div class="luxury-narrative-content">
+                  <span class="luxury-narrative-label">Featured Outcome</span>
+                  <h4 class="luxury-narrative-title">Complete Smile Makeover</h4>
+                  <div class="luxury-narrative-details">
+                    <p><strong>Primary Concern:</strong> Discoloration and gaps</p>
+                    <p><strong>Transformation:</strong> Bright, perfectly aligned smile achieved using custom porcelain veneers.</p>
+                  </div>
+                  <a href="#contact" class="btn btn--primary btn--sm magnetic-btn" style="margin-top: var(--space-4);">Book a Consultation</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wellness Panel -->
+        <div class="treatment-panel" id="panel-wellness" style="display: none;">
+          <div class="treatment-panel__row" style="grid-template-columns: 1fr 1.2fr; gap: var(--space-8);">
+            <div class="treatment-panel__menu">
+              <h3 style="font-family: var(--font-heading); color: var(--color-plum); font-size: 1.5rem; margin-bottom: var(--space-4);">Wellness & IV Therapy</h3>
+              <div class="luxury-menu-list">
+                <div class="luxury-menu-item">IV Glutathione Skin Lightening</div>
+                <div class="luxury-menu-item">Vitamin C Immunity Drip</div>
+                <div class="luxury-menu-item">Anti-Aging NAD+ Infusion</div>
+                <div class="luxury-menu-item">Weight Management Programs</div>
+                <div class="luxury-menu-item">Hormonal Balance Consultation</div>
+              </div>
+              <div class="menu-trust-indicator">
+                <i class="fa-solid fa-shield-halved text-gold"></i> Medical-grade infusions tailored to your body.
+              </div>
+            </div>
+
+            <div class="treatment-panel__featured luxury-featured-outcome">
+              <div id="menu-treatment-img-wellness" class="luxury-featured-img"></div>
+              <div class="luxury-narrative-overlay">
+                <div class="luxury-narrative-content">
+                  <span class="luxury-narrative-label">Featured Outcome</span>
+                  <h4 class="luxury-narrative-title">Total Body Rejuvenation</h4>
+                  <div class="luxury-narrative-details">
+                    <p><strong>Primary Concern:</strong> Dull skin and chronic fatigue</p>
+                    <p><strong>Transformation:</strong> Radiant, glowing skin and restored energy levels via tailored IV Glutathione.</p>
+                  </div>
+                  <a href="#contact" class="btn btn--primary btn--sm magnetic-btn" style="margin-top: var(--space-4);">Book a Consultation</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- SECTION 19 — FAQ SECTION (ACCORDIONS) -->
+  <section class="section-divider" style="background: var(--color-white); padding: var(--space-section) 0;">
+    <div class="container container--narrow">
+      <div style="text-align: center; margin-bottom: var(--space-16);">
+        <span class="section-label">Questions & Answers</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">Get instant answers to the most common questions about the clinic and academy pathways.</p>
+      </div>
+
+      <div class="faq-accordion" style="display: flex; flex-direction: column; gap: 10px;">
+        
+        <!-- FAQ 1 -->
+        <div class="why-card" style="margin: 0; padding: 0; border-radius: var(--radius-md); overflow: hidden;">
+          <button class="faq-btn magnetic-btn" style="width: 100%; text-align: left; padding: var(--space-5) var(--space-6); background: var(--color-cream); font-family: var(--font-heading); font-size: var(--text-md); color: var(--color-plum); font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+            <span>Who is eligible to enroll in V-Treat Academy courses?</span>
+            <i class="fa-solid fa-chevron-down text-gold" style="transition: transform var(--duration-base);"></i>
+          </button>
+          <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height var(--duration-base) ease-out; background: var(--color-white);">
+            <div style="padding: var(--space-5) var(--space-6); font-size: var(--text-sm); color: var(--color-text-muted);">
+              We offer two tracks: the Medical Track is open to graduates in alternative and modern medicine (MBBS, BDS, BAMS, BHMS, BSMS, etc.). The Non-Medical Track is open to anyone passionate about beauty and aesthetics, including beauticians, nurses, and entrepreneurs.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="why-card" style="margin: 0; padding: 0; border-radius: var(--radius-md); overflow: hidden;">
+          <button class="faq-btn magnetic-btn" style="width: 100%; text-align: left; padding: var(--space-5) var(--space-6); background: var(--color-cream); font-family: var(--font-heading); font-size: var(--text-md); color: var(--color-plum); font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+            <span>Do students get hands-on training on real patients?</span>
+            <i class="fa-solid fa-chevron-down text-gold" style="transition: transform var(--duration-base);"></i>
+          </button>
+          <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height var(--duration-base) ease-out; background: var(--color-white);">
+            <div style="padding: var(--space-5) var(--space-6); font-size: var(--text-sm); color: var(--color-text-muted);">
+              Yes, V-Treat Academy is the only institute in Madurai that offers live clinical training. Students perform treatments on real patients under the strict supervision of MBBS doctors in our fully functioning clinical facility.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="why-card" style="margin: 0; padding: 0; border-radius: var(--radius-md); overflow: hidden;">
+          <button class="faq-btn magnetic-btn" style="width: 100%; text-align: left; padding: var(--space-5) var(--space-6); background: var(--color-cream); font-family: var(--font-heading); font-size: var(--text-md); color: var(--color-plum); font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+            <span>Are the certifications globally recognized?</span>
+            <i class="fa-solid fa-chevron-down text-gold" style="transition: transform var(--duration-base);"></i>
+          </button>
+          <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height var(--duration-base) ease-out; background: var(--color-white);">
+            <div style="padding: var(--space-5) var(--space-6); font-size: var(--text-sm); color: var(--color-text-muted);">
+              Absolutely. Our academy is ISO certified, MSME registered (Government of India), and approved by Skill Tamil Nadu, ensuring your credentials are valid across India and internationally.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="why-card" style="margin: 0; padding: 0; border-radius: var(--radius-md); overflow: hidden;">
+          <button class="faq-btn magnetic-btn" style="width: 100%; text-align: left; padding: var(--space-5) var(--space-6); background: var(--color-cream); font-family: var(--font-heading); font-size: var(--text-md); color: var(--color-plum); font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+            <span>What is the batch size for Academy courses?</span>
+            <i class="fa-solid fa-chevron-down text-gold" style="transition: transform var(--duration-base);"></i>
+          </button>
+          <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height var(--duration-base) ease-out; background: var(--color-white);">
+            <div style="padding: var(--space-5) var(--space-6); font-size: var(--text-sm); color: var(--color-text-muted);">
+              To ensure personalized attention and optimal learning, we strictly limit our batches to a maximum of 12 students per batch.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="why-card" style="margin: 0; padding: 0; border-radius: var(--radius-md); overflow: hidden;">
+          <button class="faq-btn magnetic-btn" style="width: 100%; text-align: left; padding: var(--space-5) var(--space-6); background: var(--color-cream); font-family: var(--font-heading); font-size: var(--text-md); color: var(--color-plum); font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+            <span>Does the academy provide job placement support?</span>
+            <i class="fa-solid fa-chevron-down text-gold" style="transition: transform var(--duration-base);"></i>
+          </button>
+          <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height var(--duration-base) ease-out; background: var(--color-white);">
+            <div style="padding: var(--space-5) var(--space-6); font-size: var(--text-sm); color: var(--color-text-muted);">
+              Yes, we offer 100% placement assistance and have hiring partnerships with over 12 leading clinics and hospitals across India. We also offer business setup mentorship for entrepreneurs.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="why-card" style="margin: 0; padding: 0; border-radius: var(--radius-md); overflow: hidden;">
+          <button class="faq-btn magnetic-btn" style="width: 100%; text-align: left; padding: var(--space-5) var(--space-6); background: var(--color-cream); font-family: var(--font-heading); font-size: var(--text-md); color: var(--color-plum); font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+            <span>How can I book an appointment at the V-Treat Clinic?</span>
+            <i class="fa-solid fa-chevron-down text-gold" style="transition: transform var(--duration-base);"></i>
+          </button>
+          <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height var(--duration-base) ease-out; background: var(--color-white);">
+            <div style="padding: var(--space-5) var(--space-6); font-size: var(--text-sm); color: var(--color-text-muted);">
+              You can book an appointment by clicking the "Book Clinic Appointment" button, calling us directly at +91 79042 80255, or sending a message on WhatsApp.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div class="why-card" style="margin: 0; padding: 0; border-radius: var(--radius-md); overflow: hidden;">
+          <button class="faq-btn magnetic-btn" style="width: 100%; text-align: left; padding: var(--space-5) var(--space-6); background: var(--color-cream); font-family: var(--font-heading); font-size: var(--text-md); color: var(--color-plum); font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+            <span>Are aesthetic treatments safe, and who performs them?</span>
+            <i class="fa-solid fa-chevron-down text-gold" style="transition: transform var(--duration-base);"></i>
+          </button>
+          <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height var(--duration-base) ease-out; background: var(--color-white);">
+            <div style="padding: var(--space-5) var(--space-6); font-size: var(--text-sm); color: var(--color-text-muted);">
+              All clinic treatments are 100% safe and performed by qualified MBBS doctors and certified aesthetic specialists using FDA-approved technology and strict clinical sterilization protocols.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 8 -->
+        <div class="why-card" style="margin: 0; padding: 0; border-radius: var(--radius-md); overflow: hidden;">
+          <button class="faq-btn magnetic-btn" style="width: 100%; text-align: left; padding: var(--space-5) var(--space-6); background: var(--color-cream); font-family: var(--font-heading); font-size: var(--text-md); color: var(--color-plum); font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+            <span>What is the duration of the courses?</span>
+            <i class="fa-solid fa-chevron-down text-gold" style="transition: transform var(--duration-base);"></i>
+          </button>
+          <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height var(--duration-base) ease-out; background: var(--color-white);">
+            <div style="padding: var(--space-5) var(--space-6); font-size: var(--text-sm); color: var(--color-text-muted);">
+              The course duration ranges from 1 month for short-term certification masterclasses to 3 or 6 months for PG diplomas and fellowships.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 9 -->
+        <div class="why-card" style="margin: 0; padding: 0; border-radius: var(--radius-md); overflow: hidden;">
+          <button class="faq-btn magnetic-btn" style="width: 100%; text-align: left; padding: var(--space-5) var(--space-6); background: var(--color-cream); font-family: var(--font-heading); font-size: var(--text-md); color: var(--color-plum); font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+            <span>Is there hostel accommodation available for outstation students?</span>
+            <i class="fa-solid fa-chevron-down text-gold" style="transition: transform var(--duration-base);"></i>
+          </button>
+          <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height var(--duration-base) ease-out; background: var(--color-white);">
+            <div style="padding: var(--space-5) var(--space-6); font-size: var(--text-sm); color: var(--color-text-muted);">
+              Yes, we assist outstation students with safe and comfortable hostel accommodations near the academy in Madurai.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 10 -->
+        <div class="why-card" style="margin: 0; padding: 0; border-radius: var(--radius-md); overflow: hidden;">
+          <button class="faq-btn magnetic-btn" style="width: 100%; text-align: left; padding: var(--space-5) var(--space-6); background: var(--color-cream); font-family: var(--font-heading); font-size: var(--text-md); color: var(--color-plum); font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+            <span>Do you offer financial options or installment plans for course fees?</span>
+            <i class="fa-solid fa-chevron-down text-gold" style="transition: transform var(--duration-base);"></i>
+          </button>
+          <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height var(--duration-base) ease-out; background: var(--color-white);">
+            <div style="padding: var(--space-5) var(--space-6); font-size: var(--text-sm); color: var(--color-text-muted);">
+              Yes, we offer flexible installment options to help aspiring students kickstart their career in aesthetic medicine without immediate financial burden.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 20 — MEDICAL TRUST & CLINICAL CASE STUDIES -->
+  <section class="medical-trust section-divider">
+    <div class="container">
+      
+      <!-- Institutional Trust Row -->
+      <div class="trust-plaque-grid" style="margin-bottom: var(--space-20);">
+        <div style="text-align: center; margin-bottom: var(--space-10);">
+          <span class="section-label">Institutional Authority</span>
+          <h2 class="section-title">Government & Industry Certifications</h2>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-6);">
+          <!-- Plaque 1 -->
+          <div class="trust-plaque">
+            <span class="trust-plaque__icon"><i class="fa-solid fa-certificate"></i></span>
+            <div class="trust-plaque__content">
+              <h4 class="trust-plaque__title">ISO 9001:2015</h4>
+              <p class="trust-plaque__desc">Certified Quality Management</p>
+            </div>
+          </div>
+          <!-- Plaque 2 -->
+          <div class="trust-plaque">
+            <span class="trust-plaque__icon"><i class="fa-solid fa-building-columns"></i></span>
+            <div class="trust-plaque__content">
+              <h4 class="trust-plaque__title">MSME Registered</h4>
+              <p class="trust-plaque__desc">Govt. of India Recognized</p>
+            </div>
+          </div>
+          <!-- Plaque 3 -->
+          <div class="trust-plaque">
+            <span class="trust-plaque__icon"><i class="fa-solid fa-award"></i></span>
+            <div class="trust-plaque__content">
+              <h4 class="trust-plaque__title">Skill TN Approved</h4>
+              <p class="trust-plaque__desc">Accredited Training Institute</p>
+            </div>
+          </div>
+          <!-- Plaque 4 -->
+          <div class="trust-plaque">
+            <span class="trust-plaque__icon"><i class="fa-solid fa-user-doctor"></i></span>
+            <div class="trust-plaque__content">
+              <h4 class="trust-plaque__title">Medical Board</h4>
+              <p class="trust-plaque__desc">Certified Excellence & Safety</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: var(--space-10); display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-6); padding-top: var(--space-8); border-top: 1px solid var(--color-border-gold);">
+          <div class="trust-feature"><i class="fa-solid fa-check-double text-gold" style="margin-right: 8px;"></i> Expert Doctors & Staff</div>
+          <div class="trust-feature"><i class="fa-solid fa-check-double text-gold" style="margin-right: 8px;"></i> FDA-Approved Technology</div>
+          <div class="trust-feature"><i class="fa-solid fa-check-double text-gold" style="margin-right: 8px;"></i> Custom Care Plans</div>
+          <div class="trust-feature"><i class="fa-solid fa-check-double text-gold" style="margin-right: 8px;"></i> High Sterilization Standards</div>
+        </div>
+      </div>
+
+      <!-- Clinical Case Studies -->
+      <div class="clinical-case-studies">
+        <div style="text-align: center; margin-bottom: var(--space-10);">
+          <span class="section-label">Verified Results</span>
+          <h2 class="section-title">Clinical Case Studies</h2>
+          <p class="section-subtitle" style="margin: 0 auto;">Interact with our before-and-after cases demonstrating real, medically supervised transformations.</p>
+        </div>
+
+        <div class="case-study-container">
+          <!-- Left: Before & After Slider -->
+          <div class="case-study-visual">
+            <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: var(--space-6);" class="ba-tabs">
+              <button class="btn btn--outline ba-tab-btn active magnetic-btn" data-transform="acne">Severe Acne</button>
+              <button class="btn btn--outline ba-tab-btn magnetic-btn" data-transform="melasma">Melasma</button>
+              <button class="btn btn--outline ba-tab-btn magnetic-btn" data-transform="scars">Acne Scars</button>
+              <button class="btn btn--outline ba-tab-btn magnetic-btn" data-transform="pigment">Dark Circles</button>
+            </div>
+            <div class="ba-card" id="ba-slider" style="height: 450px;">
+              <div class="ba-card__after" id="ba-after-img" style="background-image: none;"></div>
+              <div class="ba-card__before" id="ba-before-img" style="background-image: none;"></div>
+              <div class="ba-card__divider" id="ba-divider"></div>
+              <span class="ba-card__label ba-card__label--before" id="ba-label-before">Before</span>
+              <span class="ba-card__label ba-card__label--after" id="ba-label-after">After</span>
+            </div>
+          </div>
+
+          <!-- Right: Context -->
+          <div class="case-study-context">
+            <h3 class="case-study-context__title" id="cs-title">Severe Acne Treatment</h3>
+            
+            <div class="cs-metric-grid">
+              <div class="cs-metric">
+                <span class="cs-metric__label">Clinical Concern</span>
+                <span class="cs-metric__value" id="cs-concern">Grade 4 Active Acne & Inflammation</span>
+              </div>
+              <div class="cs-metric">
+                <span class="cs-metric__label">Primary Treatment</span>
+                <span class="cs-metric__value" id="cs-treatment">Advanced Chemical Peels + Laser Genesis</span>
+              </div>
+              <div class="cs-metric">
+                <span class="cs-metric__label">Treatment Duration</span>
+                <span class="cs-metric__value" id="cs-duration">6 Sessions (12 Weeks)</span>
+              </div>
+              <div class="cs-metric">
+                <span class="cs-metric__label">Verified Outcome</span>
+                <span class="cs-metric__value" id="cs-outcome">90% clearance of active acne with normalized sebum production.</span>
+              </div>
+            </div>
+
+            <p class="cs-narrative" id="cs-narrative">
+              This patient presented with severe cystic acne. Our personalized treatment protocol targeted both the active bacteria and underlying inflammation, resulting in clear, healthy skin without excessive scarring.
+            </p>
+
+            <a href="#contact" class="btn btn--primary magnetic-btn" style="margin-top: auto; text-align: center;">Book Your Consultation</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 21 — GALLERY SECTION (CURATED EDITORIAL GRID) -->
+  <section class="social-proof section-divider">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: var(--space-16);">
+        <span class="section-label">Editorial Gallery</span>
+        <h2 class="section-title">Clinical Life & Academy Moments</h2>
+        <p class="section-subtitle" style="margin: 0 auto;">Take a visual walkthrough of our real clinical setups, training sessions, and student batches.</p>
+      </div>
+
+      <div class="social-proof__grid">
+        <!-- Slot 1 (Large) -->
+        <div style="grid-column: span 2; grid-row: span 2; background: var(--color-plum-light); border-radius: var(--radius-md); overflow: hidden; min-height: 250px; border: 1px solid var(--color-border-gold);" id="gallery-img-1">
+          <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-stethoscope text-gold" style="font-size: 3rem;"></i></div>
+        </div>
+        <!-- Slot 2 -->
+        <div style="background: var(--color-cream-dark); border-radius: var(--radius-md); overflow: hidden; min-height: 120px; border: 1px solid var(--color-border-gold);" id="gallery-img-2">
+          <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-user-doctor text-primary" style="font-size: 2rem;"></i></div>
+        </div>
+        <!-- Slot 3 -->
+        <div style="background: var(--color-plum-light); border-radius: var(--radius-md); overflow: hidden; min-height: 120px; border: 1px solid var(--color-border-gold);" id="gallery-img-3">
+          <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-graduation-cap text-gold" style="font-size: 2rem;"></i></div>
+        </div>
+        <!-- Slot 4 (Tall) -->
+        <div style="grid-row: span 2; background: var(--color-cream-dark); border-radius: var(--radius-md); overflow: hidden; min-height: 250px; border: 1px solid var(--color-border-gold);" id="gallery-img-4">
+          <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-book-open text-primary" style="font-size: 2.5rem;"></i></div>
+        </div>
+        <!-- Slot 5 -->
+        <div style="background: var(--color-plum-light); border-radius: var(--radius-md); overflow: hidden; min-height: 120px; border: 1px solid var(--color-border-gold);" id="gallery-img-5">
+          <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-award text-gold" style="font-size: 2rem;"></i></div>
+        </div>
+        <!-- Slot 6 (Wide) -->
+        <div style="grid-column: span 2; background: var(--color-cream-dark); border-radius: var(--radius-md); overflow: hidden; min-height: 120px; border: 1px solid var(--color-border-gold);" id="gallery-img-6">
+          <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-microscope text-primary" style="font-size: 2.5rem;"></i></div>
+        </div>
+        <!-- Slot 7 -->
+        <div style="background: var(--color-plum-light); border-radius: var(--radius-md); overflow: hidden; min-height: 120px; border: 1px solid var(--color-border-gold);" id="gallery-img-7">
+          <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-spa text-gold" style="font-size: 2rem;"></i></div>
+        </div>
+        <!-- Slot 8 -->
+        <div style="background: var(--color-cream-dark); border-radius: var(--radius-md); overflow: hidden; min-height: 120px; border: 1px solid var(--color-border-gold);" id="gallery-img-8">
+          <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-hospital text-primary" style="font-size: 2rem;"></i></div>
+        </div>
+        <!-- Slot 9 -->
+        <div style="background: var(--color-plum-light); border-radius: var(--radius-md); overflow: hidden; min-height: 120px; border: 1px solid var(--color-border-gold);" id="gallery-img-9">
+          <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-kit-medical text-gold" style="font-size: 2rem;"></i></div>
+        </div>
+        <!-- Slot 10 -->
+        <div style="grid-column: span 2; background: var(--color-cream-dark); border-radius: var(--radius-md); overflow: hidden; min-height: 120px; border: 1px solid var(--color-border-gold);" id="gallery-img-10">
+          <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-sparkles text-primary" style="font-size: 2rem;"></i></div>
+        </div>
+        <!-- Slot 11 -->
+        <div style="grid-row: span 2; background: var(--color-plum-light); border-radius: var(--radius-md); overflow: hidden; min-height: 250px; border: 1px solid var(--color-border-gold);" id="gallery-img-11">
+          <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-magic text-gold" style="font-size: 2.5rem;"></i></div>
+        </div>
+        <!-- Slot 12 -->
+        <div style="background: var(--color-cream-dark); border-radius: var(--radius-md); overflow: hidden; min-height: 120px; border: 1px solid var(--color-border-gold);" id="gallery-img-12">
+          <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-star text-primary" style="font-size: 2rem;"></i></div>
+        </div>
+        <!-- Slot 13 -->
+        <div style="grid-column: span 2; background: var(--color-plum-light); border-radius: var(--radius-md); overflow: hidden; min-height: 120px; border: 1px solid var(--color-border-gold);" id="gallery-img-13">
+          <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-crown text-gold" style="font-size: 2rem;"></i></div>
+        </div>
+        <!-- Slot 14 -->
+        <div style="background: var(--color-cream-dark); border-radius: var(--radius-md); overflow: hidden; min-height: 120px; border: 1px solid var(--color-border-gold);" id="gallery-img-14">
+          <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-leaf text-primary" style="font-size: 2rem;"></i></div>
+        </div>
+        <!-- Slot 15 -->
+        <div style="background: var(--color-plum-light); border-radius: var(--radius-md); overflow: hidden; min-height: 120px; border: 1px solid var(--color-border-gold);" id="gallery-img-15">
+          <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-tooth text-gold" style="font-size: 2rem;"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 22 — CONTACT SECTION (FORM, LOCATION, GOOGLE MAPS) -->
+  <section class="contact" id="contact" style="background: var(--color-cream);">
+    <div class="container">
+      <div class="contact__grid">
+        <!-- 1. Left: Map and Contact Info -->
+        <div>
+          <span class="section-label">Location & Contact</span>
+          <h2 class="section-title">Visit V-Treat in Madurai</h2>
+          
+          <div class="contact__map-wrap" style="height: 300px; border-radius: var(--radius-lg); overflow: hidden; margin-bottom: var(--space-6);">
+            <!-- Live Google Map Embed -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.778819270916!2d78.13478289999999!3d9.952352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c5bcfa02f239%3A0x69cc0c5da7c3e2a7!2sMadurai%20V-Treat%20clinic%20%26%20Academy!5e0!3m2!1sen!2sin!4v1781379134384!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: var(--space-4);">
+            <p style="font-size: var(--text-sm);">
+              <strong>Address:</strong> 76/1 Vairam Durairaj Illam, Athikullam Main Road, near CBI ACB, Ramnad Reserve Line, Athikullam Post, Madurai, Tamil Nadu - 625014
+            </p>
+            <p style="font-size: var(--text-sm);">
+              <strong>Hours:</strong> Monday to Saturday 9:00 AM &ndash; 7:00 PM, Sunday by Appointment Only
+            </p>
+            <p style="font-size: var(--text-sm);">
+              <strong>Call:</strong> <a href="tel:+917904280255" class="text-gold" style="font-weight: 600;">+91 79042 80255</a>
+            </p>
+            <p style="font-size: var(--text-sm);">
+              <strong>Email:</strong> <a href="mailto:vtreatclinicacademy@gmail.com" class="text-gold">vtreatclinicacademy@gmail.com</a>
+            </p>
+            
+            <div style="display: flex; gap: 10px; margin-top: 10px;" class="footer-badges">
+              <span style="padding: 5px 10px; background: var(--color-white); border-radius: var(--radius-sm); font-size: 10px; font-weight: 700; border: 1px solid var(--color-border-gold);">MSME REGISTERED</span>
+              <span style="padding: 5px 10px; background: var(--color-white); border-radius: var(--radius-sm); font-size: 10px; font-weight: 700; border: 1px solid var(--color-border-gold);">SKILL TN APPROVED</span>
+              <span style="padding: 5px 10px; background: var(--color-white); border-radius: var(--radius-sm); font-size: 10px; font-weight: 700; border: 1px solid var(--color-border-gold);">ISO CERTIFIED</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Right: Contact Form -->
+        <div class="contact__form-wrap">
+          <h3 style="font-size: var(--text-2xl); color: var(--color-plum); margin-bottom: var(--space-6);">Enquire Online</h3>
+          <form id="enquiry-form" novalidate>
+            <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-bottom: var(--space-4);">
+              <input type="text" id="form-name" class="form-field" placeholder="Name" required style="width: 100%; padding: var(--space-3); border: 1px solid var(--color-border); border-radius: var(--radius-sm); outline: none;">
+              <input type="email" id="form-email" class="form-field" placeholder="Email" style="width: 100%; padding: var(--space-3); border: 1px solid var(--color-border); border-radius: var(--radius-sm); outline: none;">
+            </div>
+            <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-bottom: var(--space-4);">
+              <input type="tel" id="form-phone" class="form-field" placeholder="Phone Number" required style="width: 100%; padding: var(--space-3); border: 1px solid var(--color-border); border-radius: var(--radius-sm); outline: none;">
+              <input type="text" id="form-city" class="form-field" placeholder="City" style="width: 100%; padding: var(--space-3); border: 1px solid var(--color-border); border-radius: var(--radius-sm); outline: none;">
+            </div>
+            <div style="margin-bottom: var(--space-4);">
+              <select id="form-interest" class="form-field" style="width: 100%; padding: var(--space-3); border: 1px solid var(--color-border); border-radius: var(--radius-sm); outline: none; background: #fff;">
+                <option value="">Select Course or Treatment Interest</option>
+                <optgroup label="Academy Courses">
+                  <option value="Fellowship in Aesthetic Medicine">Fellowship in Aesthetic Medicine</option>
+                  <option value="PG Diploma in Cosmetology">PG Diploma in Clinical Cosmetology</option>
+                  <option value="Laser specialist">Advanced Laser & Light Therapies</option>
+                  <option value="Botox masterclass">Masterclass in Botox & Fillers</option>
+                  <option value="Trichology">Hair Restoration & Trichology</option>
+                  <option value="PMU Board certified">Board Certified PMU Specialist</option>
+                  <option value="Microblading Masterclass">Microblading Masterclass</option>
+                  <option value="Korean Skincare">Advanced Korean Skin Treatments</option>
+                  <option value="Lash artistry">Professional Eyelash Artistry</option>
+                  <option value="Chemical peels course">Chemical Peels & Rejuvenation</option>
+                  <option value="Beauty business">Beauty Entrepreneurship</option>
+                </optgroup>
+                <optgroup label="Clinic Treatments">
+                  <option value="Skin treatments">Skin Rejuvenation</option>
+                  <option value="Hair treatments">Hair Restoration</option>
+                  <option value="Laser treatments">Laser Procedures</option>
+                  <option value="PMU treatments">PMU Services</option>
+                  <option value="Dental treatments">Dental Care</option>
+                  <option value="Wellness treatments">Body Contouring</option>
+                </optgroup>
+              </select>
+            </div>
+            <div style="margin-bottom: var(--space-6);">
+              <textarea id="form-message" class="form-field" placeholder="Message" rows="5" style="width: 100%; padding: var(--space-3); border: 1px solid var(--color-border); border-radius: var(--radius-sm); outline: none;"></textarea>
+            </div>
+            
+            <div id="form-feedback" style="display: none; font-size: var(--text-sm); margin-bottom: var(--space-4); font-weight: 600;"></div>
+
+            <div style="display: flex; gap: 10px;">
+              <button type="submit" class="btn btn--primary magnetic-btn" id="btn-submit" style="color: var(--color-plum);">Submit Enquiry</button>
+              <button type="button" class="btn btn--secondary magnetic-btn" id="btn-whatsapp" style="background: #25D366; border-color: #25D366; color: white;"><i class="fa-brands fa-whatsapp"></i> Send via WhatsApp</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 23 — FOOTER (4 COLUMNS) -->
+  <footer class="footer section-divider" style="background: var(--color-plum); color: var(--color-white); padding-top: var(--space-20);">
+    <div class="container">
+      <div class="footer__top" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-10); margin-bottom: var(--space-12);">
+        <!-- Column 1 -->
+        <div class="footer__brand">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: var(--space-4);">
+            <div id="footer-logo-container" style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; border: 2px solid var(--color-gold); background: var(--color-white); flex-shrink: 0; display: flex; align-items: center; justify-content: center;"></div>
+            <div style="display: flex; flex-direction: column; color: var(--color-white);">
+              <span style="font-weight: 300; font-size: 1.15rem; line-height: 1.2;">V-TREAT</span>
+              <span style="font-family: var(--font-body); font-size: 0.65rem; letter-spacing: 0.1em; color: var(--color-gold); line-height: 1.2;">CLINIC & ACADEMY</span>
+            </div>
+          </div>
+          <p style="color: rgba(255,255,255,0.6); font-size: var(--text-sm); line-height: 1.6; margin-bottom: var(--space-4);">
+            V-Treat is a doctor-led multi-specialty wellness and training center committed to professional education and luxury clinical safety.
+          </p>
+          <div style="font-family: var(--font-heading); font-style: italic; color: var(--color-gold-accent);">Learn &bull; Heal &bull; Lead</div>
+        </div>
+
+        <!-- Column 2 -->
+        <div>
+          <h4 style="color: var(--color-white); font-size: var(--text-sm); font-weight: 600; text-transform: uppercase; margin-bottom: var(--space-4); letter-spacing: 0.05em;">Academy Paths</h4>
+          <ul style="display: flex; flex-direction: column; gap: var(--space-2); font-size: var(--text-sm); color: rgba(255,255,255,0.7);">
+            <li><a href="#academy">Clinical Cosmetology</a></li>
+            <li><a href="#academy">Non-Medical Diploma</a></li>
+            <li><a href="#academy">PMU Certification</a></li>
+            <li><a href="#academy">Eyelash Extension</a></li>
+            <li><a href="#academy">Admissions Pathway</a></li>
+            <li><a href="#academy">Placement Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 -->
+        <div>
+          <h4 style="color: var(--color-white); font-size: var(--text-sm); font-weight: 600; text-transform: uppercase; margin-bottom: var(--space-4); letter-spacing: 0.05em;">Clinic Services</h4>
+          <ul style="display: flex; flex-direction: column; gap: var(--space-2); font-size: var(--text-sm); color: rgba(255,255,255,0.7);">
+            <li><a href="#treatments">Dental Care</a></li>
+            <li><a href="#treatments">Skin Treatments</a></li>
+            <li><a href="#treatments">Hair Restoration</a></li>
+            <li><a href="#treatments">Laser Procedures</a></li>
+            <li><a href="#treatments">PMU Services</a></li>
+            <li><a href="#treatments">Wellness conturing</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4 -->
+        <div>
+          <h4 style="color: var(--color-white); font-size: var(--text-sm); font-weight: 600; text-transform: uppercase; margin-bottom: var(--space-4); letter-spacing: 0.05em;">Contact Us</h4>
+          <ul style="display: flex; flex-direction: column; gap: var(--space-3); font-size: var(--text-sm); color: rgba(255,255,255,0.7);">
+            <li><i class="fa-solid fa-location-dot" style="margin-right: 10px; color: var(--color-gold);"></i> Madurai, TN, India</li>
+            <li><i class="fa-solid fa-phone" style="margin-right: 10px; color: var(--color-gold);"></i> <a href="tel:+917904280255">+91 79042 80255</a></li>
+            <li><i class="fa-solid fa-envelope" style="margin-right: 10px; color: var(--color-gold);"></i> <a href="mailto:vtreatclinicacademy@gmail.com">vtreatclinicacademy@gmail.com</a></li>
+            <li><i class="fa-solid fa-clock" style="margin-right: 10px; color: var(--color-gold);"></i> Mon-Sat 9AM-7PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom" style="border-top: 1px solid rgba(255,255,255,0.08); padding: var(--space-6) 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; font-size: var(--text-xs); color: rgba(255,255,255,0.4);">
+        <div>&copy; 2026 V-Treat Clinic & Academy. All Rights Reserved.</div>
+        <div style="display: flex; gap: var(--space-4);">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SECTION 24 — FAB BUTTONS: FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/917904280255?text=Hi.%20Enquiry%20for%20V-Treat%20Clinic%20Academy." target="_blank" class="ai-orb" style="bottom: 90px; background: #25D366; border: none; display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 4px 20px rgba(37,211,102,0.4);" id="whatsapp-fab" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp" style="font-size: 28px;"></i>
+  </a>
+
+  <!-- SECTION 25 — AI-POWERED ASSISTANT CHATBOT -->
+  <button class="ai-orb" id="chatbot-toggle" style="bottom: 20px;" aria-label="Open Chatbot">
+    <i class="fa-solid fa-robot" style="font-size: 24px; color: var(--color-gold-accent);"></i>
+    <span class="ai-orb__label">V-Treat Assistant</span>
+    <span class="ai-orb__pulse"></span>
+  </button>
+
+  <div class="ai-panel" id="chatbot-panel" style="display: none;">
+    <div class="ai-panel__header">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <span style="font-size: 1.5rem; color: var(--color-gold-accent);"><i class="fa-solid fa-robot"></i></span>
+        <div>
+          <h4 style="color: var(--color-white); font-size: var(--text-sm); font-weight: 600;">V-Treat AI Assistant</h4>
+          <span class="ai-panel__header-status" style="font-size: 10px; color: rgba(255,255,255,0.6);">Online and ready</span>
+        </div>
+      </div>
+      <button class="ai-panel__close" id="chatbot-close" aria-label="Close Chatbot">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    
+    <!-- Chat messages -->
+    <div class="ai-panel__messages" id="chatbot-messages">
+      <div class="ai-msg ai-msg--bot">
+        <div class="ai-msg__bubble">
+          Hi, I am the V-Treat Assistant. I can help you find the right Academy course or book a clinic treatment. What brings you here today?
+        </div>
+        <span class="ai-msg__time">Just now</span>
+      </div>
+    </div>
+
+    <!-- Quick replies -->
+    <div class="ai-panel__quick-replies" id="chatbot-replies">
+      <button class="ai-quick-btn magnetic-btn" data-value="join">Join the Academy</button>
+      <button class="ai-quick-btn magnetic-btn" data-value="book">Book Clinic Treatment</button>
+      <button class="ai-quick-btn magnetic-btn" data-value="fees">Course fees and details</button>
+      <button class="ai-quick-btn magnetic-btn" data-value="whatsapp">Talk to us on WhatsApp</button>
+    </div>
+
+    <!-- Input bar -->
+    <div class="ai-panel__input-wrap">
+      <input type="text" class="ai-panel__input" id="chatbot-input" placeholder="Type your message...">
+      <button class="ai-panel__send" id="chatbot-send" aria-label="Send Message">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M22 2L11 13M22 2L15 22L11 13M11 13L2 9L22 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- CDNs for scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+
+  <!-- custom logic -->
+  <script src="js/app.js?v=24"></script>
+
+</body>
+</html>
