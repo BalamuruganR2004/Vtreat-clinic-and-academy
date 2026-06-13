@@ -67,11 +67,30 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  const whatsappFabScroll = document.getElementById('whatsapp-fab');
+  const chatbotToggleScroll = document.getElementById('chatbot-toggle');
+  const contactSectionScroll = document.getElementById('contact');
+
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
       navbar.classList.add('is-scrolled');
     } else {
       navbar.classList.remove('is-scrolled');
+    }
+
+    if (whatsappFabScroll && chatbotToggleScroll && contactSectionScroll) {
+      const rect = contactSectionScroll.getBoundingClientRect();
+      if (rect.top < window.innerHeight) {
+        whatsappFabScroll.style.opacity = '0';
+        whatsappFabScroll.style.pointerEvents = 'none';
+        chatbotToggleScroll.style.opacity = '0';
+        chatbotToggleScroll.style.pointerEvents = 'none';
+      } else {
+        whatsappFabScroll.style.opacity = '1';
+        whatsappFabScroll.style.pointerEvents = 'auto';
+        chatbotToggleScroll.style.opacity = '1';
+        chatbotToggleScroll.style.pointerEvents = 'auto';
+      }
     }
   });
 
