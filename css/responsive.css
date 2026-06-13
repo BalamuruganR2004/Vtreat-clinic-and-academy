@@ -71,6 +71,17 @@
     --space-40: 6rem !important;
   }
 
+  .academy-usp__grid,
+  .academy-tracks__grid,
+  .career-pathways__grid,
+  .ecosystem__grid,
+  .journey-row,
+  .journey-row--reverse,
+  .admission-grid-container {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-6) !important;
+  }
+
   /* Navigation */
   .nav__links {
     display: none;
@@ -363,6 +374,25 @@
     text-align: center;
   }
 
+  /* Audited Stats Strips on Mobile */
+  .academy-stats__strip,
+  .career-stats__strip {
+    grid-template-columns: 1fr 1fr !important;
+    gap: var(--space-4) !important;
+    padding: var(--space-6) !important;
+  }
+
+  /* Show bottom bar, hide floating FABs, pad body */
+  .hide-desktop {
+    display: grid !important;
+  }
+  .hide-mobile-fab {
+    display: none !important;
+  }
+  body {
+    padding-bottom: 70px !important;
+  }
+
   /* AI Concierge */
   .ai-orb {
     bottom: var(--space-5);
@@ -401,6 +431,12 @@
 
 /* --- MOBILE SMALL (< 480px) --- */
 @media (max-width: 480px) {
+  .academy-stats__strip,
+  .career-stats__strip {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-4) !important;
+  }
+
   :root {
     --side-padding: 1rem;
     --space-4: 0.85rem !important;
@@ -721,5 +757,11 @@
   #whatsapp-fab {
     bottom: 80px !important;
   }
+}
+
+/* --- GLOBAL WORD WRAPPING FIX --- */
+h1, h2, h3, h4, h5, h6, p, span, a, li, button {
+  overflow-wrap: break-word !important;
+  word-wrap: break-word !important;
 }
 

@@ -646,6 +646,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 10. AI ASSISTANT CHATBOT DECISION TREE
   // ==========================================
   const chatbotToggle = document.getElementById('chatbot-toggle');
+  const mobileChatbotToggle = document.getElementById('mobile-chatbot-toggle');
   const chatbotPanel = document.getElementById('chatbot-panel');
   const chatbotClose = document.getElementById('chatbot-close');
   const messagesContainer = document.getElementById('chatbot-messages');
@@ -869,11 +870,19 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Wire up chatbot open/close
-  if (chatbotToggle && chatbotPanel) {
-    chatbotToggle.addEventListener('click', (e) => {
-      e.stopPropagation();
-      chatbotPanel.classList.toggle('is-open');
-    });
+  if (chatbotPanel) {
+    if (chatbotToggle) {
+      chatbotToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        chatbotPanel.classList.toggle('is-open');
+      });
+    }
+    if (mobileChatbotToggle) {
+      mobileChatbotToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        chatbotPanel.classList.toggle('is-open');
+      });
+    }
   }
 
   if (chatbotClose && chatbotPanel) {
@@ -1100,8 +1109,12 @@ document.addEventListener('DOMContentLoaded', () => {
               if (baBeforeImg) baBeforeImg.style.backgroundImage = `url(${imgSrc})`;
               if (baAfterImg) baAfterImg.style.backgroundImage = `url(${imgSrc})`;
             }
-            if (baLabelBefore) baLabelBefore.textContent = config.labelBefore;
-            if (baLabelAfter) baLabelAfter.textContent = config.labelAfter;
+            if (baLabelBefore) {
+              baLabelBefore.textContent = window.innerWidth < 768 ? 'Before' : config.labelBefore;
+            }
+            if (baLabelAfter) {
+              baLabelAfter.textContent = window.innerWidth < 768 ? 'After' : config.labelAfter;
+            }
             
             // Update context
             if (csTitle) csTitle.textContent = config.title;
