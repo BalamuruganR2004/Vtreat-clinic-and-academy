@@ -448,4 +448,90 @@
   .hero__scroll {
     display: none;
   }
+
+  /* preloader orientation helper */
+  .loader-orbit {
+    display: none !important;
+  }
+  .loader-logo-wrapper {
+    width: 80px !important;
+    height: 80px !important;
+    margin-bottom: var(--space-3) !important;
+  }
+  .loader-logo-badge {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  .loader__logo {
+    font-size: var(--text-xl) !important;
+    margin-bottom: var(--space-4) !important;
+  }
 }
+
+/* --- ULTRA-WIDE SCREEN PROPORTIONS (2560px+) --- */
+@media (min-width: 2560px) {
+  :root {
+    --max-width: 2200px;
+    --side-padding: 8rem;
+  }
+  html {
+    font-size: 19px; /* Proportional base scaling */
+  }
+}
+
+/* --- MICRO-PHONE CRITICAL SCALING (< 360px) --- */
+@media (max-width: 360px) {
+  :root {
+    --side-padding: 0.85rem;
+  }
+  .section-title {
+    font-size: var(--text-2xl) !important;
+  }
+  .hero__title {
+    font-size: var(--text-3xl) !important;
+  }
+  .hero__badge {
+    font-size: 0.6rem;
+    padding: var(--space-1) var(--space-3) !important;
+  }
+  .btn {
+    padding: var(--space-3) var(--space-5) !important;
+    font-size: var(--text-xs) !important;
+  }
+  .stats__number {
+    font-size: var(--text-xl) !important;
+  }
+}
+
+/* --- ACCESSIBILITY TOUCH TARGET BOUNDS & SCROLLABLE TABS --- */
+@media (max-width: 600px) {
+  .ba-tabs, .course-tabs {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    gap: var(--space-2) !important;
+    justify-content: flex-start !important;
+    padding-bottom: var(--space-2);
+    width: 100%;
+    scrollbar-width: none;
+  }
+  .ba-tabs::-webkit-scrollbar, .course-tabs::-webkit-scrollbar {
+    display: none;
+  }
+  .ba-tab-btn, .course-tab-btn {
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+    min-height: 48px; /* Touch target minimum height */
+    padding: var(--space-2) var(--space-5) !important;
+  }
+}
+
+.sig-timeline-step {
+  min-height: 48px; /* Touch target safety height on stepper elements */
+}
+
+.faq-btn, .ai-quick-btn, .nav__mobile-menu .nav__link {
+  min-height: 48px; /* Expand targets for interactive overlays */
+}
+

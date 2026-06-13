@@ -49,6 +49,24 @@ document.addEventListener('DOMContentLoaded', () => {
     menuToggle.addEventListener('click', window.toggleMobileMenu);
   }
 
+  // Close mobile menu on Escape keypress
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileMenu && mobileMenu.classList.contains('is-open')) {
+      window.toggleMobileMenu();
+    }
+  });
+
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (mobileMenu && mobileMenu.classList.contains('is-open')) {
+      const clickedToggle = menuToggle && (menuToggle === e.target || menuToggle.contains(e.target));
+      const clickedMenu = mobileMenu === e.target || mobileMenu.contains(e.target);
+      if (!clickedToggle && !clickedMenu) {
+        window.toggleMobileMenu();
+      }
+    }
+  });
+
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
       navbar.classList.add('is-scrolled');
@@ -256,6 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
         y: () => -(window.innerHeight * speed),
         ease: 'none',
         scrollTrigger: {
+          id: 'gallery-parallax-' + index,
           trigger: '.social-proof',
           start: 'top bottom',
           end: 'bottom top',
@@ -280,6 +299,7 @@ document.addEventListener('DOMContentLoaded', () => {
         y: '25%', // move image down slightly as user scrolls down
         ease: 'none',
         scrollTrigger: {
+          id: 'hero-parallax',
           trigger: '.hero',
           start: 'top top',
           end: 'bottom top',
@@ -385,6 +405,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const particleCount = 25;
       for(let i=0; i<particleCount; i++) {
         const p = document.createElement('div');
+        p.className = 'gold-dust-particle';
         p.style.position = 'absolute';
         p.style.width = Math.random() * 3 + 1 + 'px';
         p.style.height = p.style.width;
@@ -522,6 +543,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (baSlider && baBefore && baDivider) {
     const handleSliderMove = (e) => {
+      if (e.type === 'touchmove') {
+        if (e.cancelable) {
+          e.preventDefault();
+        }
+      }
       const rect = baSlider.getBoundingClientRect();
       const clientX = e.clientX !== undefined ? e.clientX : (e.touches && e.touches[0] ? e.touches[0].clientX : 0);
       let x = clientX - rect.left;
@@ -535,7 +561,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     baSlider.addEventListener('mousemove', handleSliderMove);
-    baSlider.addEventListener('touchmove', handleSliderMove);
+    baSlider.addEventListener('touchmove', handleSliderMove, { passive: false });
   }
 
   // ==========================================
@@ -1335,4 +1361,64 @@ document.addEventListener('DOMContentLoaded', () => {
           `;
         }
       }
+
+      // ==========================================
+      // 12. PERFORMANCE FRAME RATE GUARD
+      // ==========================================
+      let lastFrameTime = performance.now();
+      let frameCount = 0;
+      let fpsCheckStartTime = performance.now();
+      let performanceGuardTriggered = false;
+      const fpsThreshold = 45;
+      const evaluationPeriod = 2000; // 2 seconds
+
+      function monitorPerformance(time) {
+        frameCount++;
+        
+        if (time - fpsCheckStartTime >= evaluationPeriod) {
+          const averageFps = (frameCount * 1000) / (time - fpsCheckStartTime);
+          
+          if (averageFps < fpsThreshold && !performanceGuardTriggered) {
+            performanceGuardTriggered = true;
+            triggerPerformanceGuard();
+          } else {
+            frameCount = 0;
+            fpsCheckStartTime = time;
+          }
+        }
+        
+        if (!performanceGuardTriggered) {
+          requestAnimationFrame(monitorPerformance);
+        }
+      }
+
+      function triggerPerformanceGuard() {
+        console.warn("Performance guard triggered: average FPS dropped below 45fps. Disabling heavy animations.");
+        
+        // 1. Remove gold dust particles
+        document.querySelectorAll('.gold-dust-particle').forEach(p => p.remove());
+        
+        // 2. Kill parallax scroll triggers
+        if (typeof ScrollTrigger !== 'undefined') {
+          ScrollTrigger.getAll().forEach(t => {
+            if (t.vars.id && (t.vars.id === 'hero-parallax' || t.vars.id.startsWith('gallery-parallax'))) {
+              t.kill();
+            }
+          });
+        }
+        
+        // 3. Clear transforms on target elements to reset to default layouts
+        if (typeof gsap !== 'undefined') {
+          gsap.set('[id^="gallery-img-"]', { clearProps: 'y,transform' });
+          gsap.set('.hero__bg-image', { clearProps: 'y,transform' });
+        }
+      }
+
+      // Delay start of performance monitoring by 4 seconds to bypass initial page load lag
+      setTimeout(() => {
+        lastFrameTime = performance.now();
+        fpsCheckStartTime = performance.now();
+        frameCount = 0;
+        requestAnimationFrame(monitorPerformance);
+      }, 4000);
 });
