@@ -1,0 +1,451 @@
+/* ============================================================
+   V-TREAT — RESPONSIVE DESIGN
+   ============================================================ */
+
+/* --- LARGE SCREENS (1440px+) --- */
+@media (min-width: 1440px) {
+  .hero__content {
+    max-width: 1100px;
+  }
+  
+  .treatments__grid {
+    gap: var(--space-8);
+  }
+}
+
+/* --- DESKTOP (1200px - 1439px) --- */
+@media (max-width: 1439px) {
+  .footer__top {
+    gap: var(--space-8);
+  }
+}
+
+/* --- LAPTOP (1024px - 1199px) --- */
+@media (max-width: 1199px) {
+  .stats__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .treatments__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why-choose__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why-card:last-child {
+    grid-column: span 2;
+    max-width: 50%;
+    justify-self: center;
+  }
+
+  .courses__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer__top {
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
+
+  .footer__top > :last-child {
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    gap: var(--space-4);
+  }
+}
+
+/* --- TABLET (768px - 1023px) --- */
+@media (max-width: 1023px) {
+  :root {
+    --nav-height: 70px;
+  }
+
+  /* Navigation */
+  .nav__links {
+    display: none;
+  }
+
+  .nav__menu-toggle {
+    display: flex;
+  }
+
+  .nav__mobile-menu {
+    display: flex;
+  }
+
+  /* Hero */
+  .hero__content {
+    padding: var(--space-16) var(--side-padding);
+  }
+
+  .hero__trust {
+    gap: var(--space-6);
+  }
+
+  .hero__orb--1 {
+    width: 250px;
+    height: 250px;
+  }
+
+  .hero__orb--2 {
+    width: 150px;
+    height: 150px;
+  }
+
+  .hero__orb--3 {
+    display: none;
+  }
+
+  /* About */
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  .about__image-wrap {
+    aspect-ratio: 16/9;
+    max-height: 400px;
+  }
+
+  /* Founder */
+  .founder__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  .founder__image-wrap {
+    aspect-ratio: 16/9;
+    max-height: 400px;
+  }
+
+  /* Methodology */
+  .methodology__steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+
+  .methodology__connector {
+    display: none;
+  }
+
+  /* Academy */
+  .academy__journey {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Transformations */
+  .transformations__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Social proof */
+  .social-proof__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Consultation */
+  .consultation__steps {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  /* Contact */
+  .contact__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  /* Footer */
+  .footer__top {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+  }
+
+  .footer__brand {
+    grid-column: span 2;
+    max-width: 100%;
+  }
+
+  .footer__top > :last-child {
+    grid-column: span 2;
+  }
+
+  /* Success Stories */
+  .success-stories__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* AI Panel */
+  .ai-panel {
+    width: 360px;
+    max-height: 550px;
+  }
+}
+
+/* --- MOBILE LARGE (481px - 767px) --- */
+@media (max-width: 767px) {
+  :root {
+    --nav-height: 64px;
+    --side-padding: 1.25rem;
+  }
+
+  /* Stats */
+  .stats__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+  }
+
+  .stats__item {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  /* Treatments */
+  .treatments__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+
+  /* Why Choose */
+  .why-choose__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .why-card:last-child {
+    grid-column: span 1;
+    max-width: 100%;
+  }
+
+  /* Methodology */
+  .methodology__steps {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  /* Academy */
+  .academy__journey {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  /* Courses */
+  .courses__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+
+  /* Testimonials */
+  .testimonial-card {
+    flex: 0 0 300px;
+  }
+
+  /* Social Proof */
+  .social-proof__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+  }
+
+  /* Success Stories */
+  .success-stories__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact form */
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact__form-wrap {
+    padding: var(--space-6);
+  }
+
+  /* Footer */
+  .footer__top {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .footer__brand {
+    grid-column: span 1;
+  }
+
+  .footer__top > :last-child {
+    grid-column: span 1;
+    display: block;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* AI Concierge */
+  .ai-orb {
+    bottom: var(--space-5);
+    right: var(--space-5);
+    width: 56px;
+    height: 56px;
+  }
+
+  .ai-panel {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    max-height: 85vh;
+    border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
+  }
+
+  .ai-orb__label {
+    display: none;
+  }
+
+  /* Hero trust */
+  .hero__trust {
+    gap: var(--space-5);
+  }
+
+  .hero__trust-number {
+    font-size: var(--text-xl);
+  }
+}
+
+/* --- MOBILE SMALL (< 480px) --- */
+@media (max-width: 480px) {
+  :root {
+    --side-padding: 1rem;
+  }
+
+  .hero__badge {
+    font-size: 0.65rem;
+    padding: var(--space-1) var(--space-3);
+  }
+
+  .hero__ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero__ctas .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero__trust {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+  }
+
+  .hero__scroll {
+    display: none;
+  }
+
+  .stats__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about__features {
+    grid-template-columns: 1fr;
+  }
+
+  .founder__credentials {
+    justify-content: center;
+  }
+
+  .testimonial-card {
+    flex: 0 0 280px;
+    padding: var(--space-6);
+  }
+
+  .section-title {
+    font-size: var(--text-3xl);
+  }
+
+  .footer__newsletter-form {
+    flex-direction: column;
+  }
+
+  .footer__social {
+    justify-content: center;
+  }
+}
+
+/* --- LARGE SCREEN ENHANCEMENTS (1920px+) --- */
+@media (min-width: 1920px) {
+  :root {
+    --side-padding: 6rem;
+  }
+
+  .hero__title {
+    font-size: var(--text-6xl);
+  }
+
+  .treatments__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-10);
+  }
+
+  .consultation__steps {
+    gap: var(--space-12);
+  }
+}
+
+/* --- PRINT STYLES --- */
+@media print {
+  .nav,
+  .loader,
+  .cursor-dot,
+  .cursor-ring,
+  .ai-orb,
+  .ai-panel,
+  .hero__orb,
+  .hero__scroll,
+  .scroll-progress {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+    cursor: auto;
+  }
+
+  .hero {
+    min-height: auto;
+    background: white;
+    color: black;
+  }
+
+  .hero__title {
+    color: black;
+  }
+
+  .section-title {
+    color: black;
+  }
+
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* --- LANDSCAPE PHONE --- */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero {
+    min-height: auto;
+    padding: var(--space-20) 0;
+  }
+
+  .hero__trust {
+    margin-top: var(--space-8);
+  }
+
+  .hero__scroll {
+    display: none;
+  }
+}
